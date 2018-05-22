@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
     
     
       
@@ -428,8 +428,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fulma" title="Fulma" class="md-nav__link">
-    Fulma
+  <a href="#layout" title="Layout" class="md-nav__link">
+    Layout
   </a>
   
 </li>
@@ -449,8 +449,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#npm" title="NPM" class="md-nav__link">
-    NPM
+  <a href="#js-deps" title="JS Deps" class="md-nav__link">
+    JS Deps
   </a>
   
 </li>
@@ -752,8 +752,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fulma" title="Fulma" class="md-nav__link">
-    Fulma
+  <a href="#layout" title="Layout" class="md-nav__link">
+    Layout
   </a>
   
 </li>
@@ -773,8 +773,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#npm" title="NPM" class="md-nav__link">
-    NPM
+  <a href="#js-deps" title="JS Deps" class="md-nav__link">
+    JS Deps
   </a>
   
 </li>
@@ -827,45 +827,51 @@
 <p>The template provides the ability to customise the created application. You can see template version and available options by running  <code>dotnet new SAFE --help</code>.</p>
 <h3 id="server">Server</h3>
 <p><em>Configures the SAFE app to use one of three different back-end hosting platforms.</em></p>
-<p>Usage: <code>dotnet new SAFE --Server &lt;server&gt;</code></p>
+<p>Usage: <code>dotnet new SAFE --server &lt;server&gt;</code></p>
 <p>Where <code>&lt;server&gt;</code> is one of:</p>
 <ul>
 <li><code>saturn</code>: Creates a SAFE app running on Saturn on top of Giraffe <strong>(default)</strong>.</li>
 <li><code>giraffe</code>: Creates a SAFE app running on Giraffe only.</li>
 <li><code>suave</code>: Creates a SAFE app running on Suave.</li>
 </ul>
-<h3 id="fulma">Fulma</h3>
-<p><em>Configures the SAFE app to apply <a href="https://mangelmaxime.github.io/Fulma">Fulma</a> bindings to the UI template.</em></p>
-<p>Usage: <code>dotnet new SAFE --Fulma &lt;template&gt;</code></p>
-<p>Where <code>&lt;template&gt;</code> is one of:</p>
+<h3 id="layout">Layout</h3>
+<p><em>Configures the SAFE app to apply a CSS Framework to the UI template. Currently supports just <a href="https://mangelmaxime.github.io/Fulma">Fulma</a> bindings</em></p>
+<p>Usage: <code>dotnet new SAFE --layout &lt;layout&gt;</code></p>
+<p>Where <code>&lt;layout&gt;</code> is one of:</p>
 <ul>
-<li><code>none</code>: don't add Fulma bindings at all <strong>(default)</strong>.</li>
-<li><code>basic</code>: adds Fulma basic template.</li>
-<li><code>admin</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/admin.html">'Admin'</a> Bulma template.</li>
-<li><code>cover</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/cover.html">'Cover'</a> Bulma template.</li>
-<li><code>hero</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/hero.html">'Hero'</a> Bulma template.</li>
-<li><code>landing</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/landing.html">'Landing'</a> Bulma template.</li>
-<li><code>login</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/login.html">'Login'</a> Bulma template.</li>
+<li><code>none</code>: don't add any CSS framework.</li>
+<li><code>fulma-basic</code>: adds Fulma basic template <strong>(default)</strong>.</li>
+<li><code>fulma-admin</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/admin.html">'Admin'</a> Bulma template.</li>
+<li><code>fulma-cover</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/cover.html">'Cover'</a> Bulma template.</li>
+<li><code>fulma-hero</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/hero.html">'Hero'</a> Bulma template.</li>
+<li><code>fulma-landing</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/landing.html">'Landing'</a> Bulma template.</li>
+<li><code>fulma-login</code>: adds Fulma with the <a href="https://dansup.github.io/bulma-templates/templates/login.html">'Login'</a> Bulma template.</li>
 </ul>
 <h3 id="remoting">Remoting</h3>
 <p><em>Configures the SAFE app to use <a href="https://github.com/Zaid-Ajaj/Fable.Remoting">Fable.Remoting</a> to the template. If this argument is not supplied, client / server communication will be handled through the standard routing and serialization mechanism of the server. See <a href="../feature-clientserver/">here</a> for an overview of Fable Remoting and the alternatives for sharing data between client and server.</em></p>
-<p>Usage: <code>dotnet new SAFE --Remoting</code></p>
+<p>Usage: <code>dotnet new SAFE --remoting</code></p>
 <h3 id="deploy">Deploy</h3>
 <p><em>Optionally configures the SAFE app to elements needed for deploying to one of two different hosting models. If this argument is not supplied, no explicit support for any hosting model will be provided.</em></p>
-<p>Usage: <code>dotnet new SAFE --Deploy &lt;hosting model&gt;</code></p>
+<p>Usage: <code>dotnet new SAFE --deploy &lt;hosting model&gt;</code></p>
 <p>Where <code>&lt;hosting model&gt;</code> is one of:</p>
 <ul>
+<li><code>none</code>: don't add FAKE targets to deploy <strong>(default)</strong>.</li>
 <li><code>docker</code>: Adds <a href="https://fake.build/">FAKE</a> targets that bundles and build a Docker image. See <a href="../template-docker/">here</a> for more details about Docker deployment.</li>
 <li><code>azure</code>: Adds <a href="https://fake.build/">FAKE</a> targets and an <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview">Azure Resource Manager</a> (ARM) template that allows deployment to the <a href="https://azure.microsoft.com/en-us/services/app-service/">Azure App Service</a> plus an <a href="https://azure.microsoft.com/en-us/services/application-insights/">Azure Application Insights</a> instance. See <a href="../template-appservice/">here</a> for more details about Azure deployment.</li>
 </ul>
-<h3 id="npm">NPM</h3>
-<p><em>Configures the SAFE app to use NPM instead of default Yarn for JS package management.</em></p>
-<p>Usage: <code>dotnet new SAFE --NPM</code></p>
+<h3 id="js-deps">JS Deps</h3>
+<p><em>Configures the SAFE app to use either Yarn or NPM for JS package management.</em></p>
+<p>Usage: <code>dotnet new SAFE --js-deps &lt;package manager&gt;</code></p>
+<p>Where <code>&lt;package manager&gt;</code> is one of:</p>
+<ul>
+<li><code>yarn</code>: uses <a href="https://yarnpkg.com/">Yarn</a> for JS package management  <strong>(default)</strong>.</li>
+<li><code>npm</code>: uses <a href="https://www.npmjs.com/">NPM</a> for JS package management.</li>
+</ul>
 <h2 id="examples">Examples</h2>
 <ul>
 <li>Create a SAFE application using all defaults: <code>dotnet new SAFE -lang F#</code></li>
-<li>Create a SAFE application using giraffe with Fable Remoting: <code>dotnet new SAFE -lang F# --Server giraffe --Remoting</code></li>
-<li>Create a SAFE application using Suave with Fulma: <code>dotnet new SAFE -lang F# --Server suave --Fulma landing</code></li>
+<li>Create a SAFE application using giraffe with Fable Remoting: <code>dotnet new SAFE -lang F# --server giraffe --remoting</code></li>
+<li>Create a SAFE application using Suave with Fulma: <code>dotnet new SAFE -lang F# --server suave --layout fulma-landing</code></li>
 </ul>
                 
                   

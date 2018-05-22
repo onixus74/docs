@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.2">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
     
     
       
@@ -725,7 +725,7 @@
 <li><strong>InstallClient</strong> - in this step, either NPM or Yarn is invoked (based on which option was chosen when generating project) and it installs all Client dependencies defined in <code>package.json</code>. The step also performs <code>dotnet restore</code> to fetch NuGet-based packages used by front-end.</li>
 <li><strong>Build</strong> - for server side <code>dotnet build</code> command is invoked, and for client side a special <code>dotnet-fable</code> CLI tool using <code>dotnet fable webpack</code> command with <code>-p</code> flag to compile Client project to a single JavaScript bundle file.</li>
 </ol>
-<p><em>Note: Extra build steps will be included if you specified the <a href="../template-docker"><code>--Deploy docker</code></a> or <a href="../template-appservice"><code>--Deploy azure</code></a> flag when creating your project.</em></p>
+<p><em>Note: Extra build steps will be included if you specified the <a href="../template-docker"><code>--deploy docker</code></a> or <a href="../template-appservice"><code>--deploy azure</code></a> flag when creating your project.</em></p>
 <h2 id="run-target"><strong>"Run"</strong> target</h2>
 <p>This target is used for development purposes, and provides a great live-reload experience. It consists of following steps:</p>
 <ol>
