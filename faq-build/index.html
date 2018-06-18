@@ -671,6 +671,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../news/" title="News" class="md-nav__link">
+      News
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../support/" title="Support" class="md-nav__link">
       Support
     </a>
@@ -773,11 +785,7 @@
 <p>The SAFE template is geared up towards a streamlined development process. Firstly, it contains a <a href="../template-fake">FAKE build script</a> which you can use this to quickly download dependencies, as well as build and run both the client and server on your machine.</p>
 <p>The development process uses <em>two web servers</em> running in tandem:</p>
 <ul>
-<li>The "back-end" .NET web server which hosts your API endpoints and other server-generated content.<ul>
-<li>For <strong><a href="../component-saturn">Saturn</a></strong> or <strong>Giraffe</strong>, this uses Kestrel on ASP .NET out of the box (although you can opt for <a href="">other options</a>),</li>
-<li><strong>Suave</strong> uses its own built-in HTTP server.</li>
-</ul>
-</li>
+<li>The "back-end" .NET web server which hosts your API endpoints and other server-generated content. This uses Kestrel on ASP .NET out of the box (although you can opt for <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers">other options</a>).</li>
 <li>A "front-end" web server which hosts your Fable application. The SAFE template uses the <a href="https://github.com/webpack/webpack-dev-server">Webpack Dev Server</a> for this.</li>
 </ul>
 <p><img alt="" src="../img\faq-build-1.png" /></p>

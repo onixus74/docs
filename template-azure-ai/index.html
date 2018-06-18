@@ -493,26 +493,6 @@
     How do SAFE apps integrate with AI?
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ai-support-on-giraffe-saturn" title="AI support on Giraffe / Saturn" class="md-nav__link">
-    AI support on Giraffe / Saturn
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ai-support-on-suave" title="AI support on Suave" class="md-nav__link">
-    AI support on Suave
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -674,6 +654,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../news/" title="News" class="md-nav__link">
+      News
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../support/" title="Support" class="md-nav__link">
       Support
     </a>
@@ -729,26 +721,6 @@
     How do SAFE apps integrate with AI?
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ai-support-on-giraffe-saturn" title="AI support on Giraffe / Saturn" class="md-nav__link">
-    AI support on Giraffe / Saturn
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ai-support-on-suave" title="AI support on Suave" class="md-nav__link">
-    AI support on Suave
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -797,11 +769,7 @@
 <li>Automatic configuration of your web application with connection details to the created AI instance.</li>
 <li>Application support for activating AI in code for e.g. custom events and metrics.</li>
 </ul>
-<p>All server runtimes that are supported by the SAFE Template come with AI integration out of the box:</p>
-<h3 id="ai-support-on-giraffe-saturn">AI support on Giraffe / Saturn</h3>
-<p>Giraffe uses the standard .NET Core Application Insights SDK in order to communicate with the AI service. It uses the standard AI middleware support for ASP .NET Core, which provides complete tracking of requests, dependencies, errors and live streaming.</p>
-<h3 id="ai-support-on-suave">AI support on Suave</h3>
-<p>Suave also uses the standard .NET Core Application Insights SDK in order to communicate with the AI service. However, as Suave does not run on top of ASP .NET Core, it uses a custom web part to intercept and track all requests, dependencies and exceptions on the server as well as live streaming. This web part is typically attached at the "top level" of your web application, surrounding the global WebPart in order to track all requests.</p>
+<p>AI integration is provided out-of-the-box in the template, since Giraffe uses the standard .NET Core Application Insights SDK in order to communicate with the AI service. It uses the standard AI middleware support for ASP .NET Core, which provides complete tracking of requests, dependencies, errors and live streaming.</p>
                 
                   
                 

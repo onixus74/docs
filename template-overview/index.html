@@ -693,6 +693,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../news/" title="News" class="md-nav__link">
+      News
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../support/" title="Support" class="md-nav__link">
       Support
     </a>
@@ -815,7 +827,7 @@
                 <p>The <a href="https://github.com/SAFE-Stack/SAFE-template">SAFE Template</a> is a <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore2x">dotnet CLI template</a> for SAFE Stack projects, designed to get you up and running as quickly as possible, with flexible options to suit your application.</p>
 <p>The template gets you up and running with the most common elements of the stack:</p>
 <ul>
-<li><a href="https://saturnframework.github.io/docs/">Saturn</a>, <a href="https://github.com/giraffe-fsharp/Giraffe">Giraffe</a> or <a href="https://suave.io/">Suave</a> for your web server</li>
+<li><a href="https://saturnframework.github.io/docs/">Saturn</a> or <a href="https://github.com/giraffe-fsharp/Giraffe">Giraffe</a></li>
 <li><a href="http://fable.io/">Fable</a> for client-side F#</li>
 <li><a href="https://elmish.github.io/">Elmish</a> for web UI</li>
 <li><a href="https://mangelmaxime.github.io/Fulma/">Fulma</a> for consistent web styling</li>
@@ -832,7 +844,6 @@
 <ul>
 <li><code>saturn</code>: Creates a SAFE app running on Saturn on top of Giraffe <strong>(default)</strong>.</li>
 <li><code>giraffe</code>: Creates a SAFE app running on Giraffe only.</li>
-<li><code>suave</code>: Creates a SAFE app running on Suave.</li>
 </ul>
 <h3 id="layout">Layout</h3>
 <p><em>Configures the SAFE app to apply a CSS Framework to the UI template. Currently supports just <a href="https://mangelmaxime.github.io/Fulma">Fulma</a> bindings</em></p>
@@ -869,9 +880,9 @@
 </ul>
 <h2 id="examples">Examples</h2>
 <ul>
-<li>Create a SAFE application using all defaults: <code>dotnet new SAFE -lang F#</code></li>
-<li>Create a SAFE application using giraffe with Fable Remoting: <code>dotnet new SAFE -lang F# --server giraffe --remoting</code></li>
-<li>Create a SAFE application using Suave with Fulma: <code>dotnet new SAFE -lang F# --server suave --layout fulma-landing</code></li>
+<li>Create a SAFE application using all defaults: <code>dotnet new SAFE</code></li>
+<li>Create a SAFE application using Giraffe with Fable Remoting: <code>dotnet new SAFE --server giraffe --remoting</code></li>
+<li>Create a SAFE application using Giraffe with Fulma: <code>dotnet new SAFE --server giraffe --layout fulma-landing</code></li>
 </ul>
                 
                   
