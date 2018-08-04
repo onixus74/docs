@@ -13,7 +13,7 @@
         <meta name="description" content="Documentation for SAFE">
       
       
-        <link rel="canonical" href="http://safe-stack.github.io/docs/template-azure-ai/">
+        <link rel="canonical" href="http://safe-stack.github.io/docs/feature-azurefunctions/">
       
       
         <meta name="author" content="SAFE Stack">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Application Insights Integration - SAFE Documentation</title>
+        <title>Working with Azure functions - SAFE Documentation</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#what-is-application-insights" tabindex="1" class="md-skip">
+      <a href="#going-serverless-with-safe" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 SAFE Documentation
               </span>
               <span class="md-header-nav__topic">
-                Application Insights Integration
+                Working with Azure functions
               </span>
             
           
@@ -360,12 +360,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       The SAFE Template
@@ -405,12 +403,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
     
     <label class="md-nav__link" for="nav-6-3">
       Deployment Options
@@ -450,59 +446,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Application Insights Integration
-      </label>
-    
-    <a href="./" title="Application Insights Integration" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../template-azure-ai/" title="Application Insights Integration" class="md-nav__link">
       Application Insights Integration
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-application-insights" title="What is Application Insights?" class="md-nav__link">
-    What is Application Insights?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basics-of-working-with-ai" title="Basics of working with AI" class="md-nav__link">
-    Basics of working with AI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-do-safe-apps-integrate-with-ai" title="How do SAFE apps integrate with AI?" class="md-nav__link">
-    How do SAFE apps integrate with AI?
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -532,10 +480,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       Features of SAFE
@@ -587,11 +537,92 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../feature-azurefunctions/" title="Working with Azure functions" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Working with Azure functions
+      </label>
+    
+    <a href="./" title="Working with Azure functions" class="md-nav__link md-nav__link--active">
       Working with Azure functions
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#going-serverless-with-safe" title="Going serverless with SAFE" class="md-nav__link">
+    Going serverless with SAFE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#potential-use-cases" title="Potential use cases" class="md-nav__link">
+    Potential use cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-functions-in-the-azure-portal" title="Editing Functions in the Azure Portal" class="md-nav__link">
+    Editing Functions in the Azure Portal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" title="Deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-functions-core-tools" title="Azure Functions Core Tools" class="md-nav__link">
+    Azure Functions Core Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https-upload" title="HTTPS Upload" class="md-nav__link">
+    HTTPS Upload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -715,23 +746,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-application-insights" title="What is Application Insights?" class="md-nav__link">
-    What is Application Insights?
+  <a href="#going-serverless-with-safe" title="Going serverless with SAFE" class="md-nav__link">
+    Going serverless with SAFE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#potential-use-cases" title="Potential use cases" class="md-nav__link">
+    Potential use cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-functions-in-the-azure-portal" title="Editing Functions in the Azure Portal" class="md-nav__link">
+    Editing Functions in the Azure Portal
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basics-of-working-with-ai" title="Basics of working with AI" class="md-nav__link">
-    Basics of working with AI
+  <a href="#deployment" title="Deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-functions-core-tools" title="Azure Functions Core Tools" class="md-nav__link">
+    Azure Functions Core Tools
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-do-safe-apps-integrate-with-ai" title="How do SAFE apps integrate with AI?" class="md-nav__link">
-    How do SAFE apps integrate with AI?
+        
+          <li class="md-nav__item">
+  <a href="#https-upload" title="HTTPS Upload" class="md-nav__link">
+    HTTPS Upload
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -751,37 +815,65 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/template-azure-ai.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/feature-azurefunctions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Application Insights Integration</h1>
+                  <h1>Working with Azure functions</h1>
                 
-                <h2 id="what-is-application-insights">What is Application Insights?</h2>
-<p>Application Insights (AI) is an extensible Application Performance Management (APM) service for web developers on multiple platforms. You can use it to monitor your live web application; it will automatically detect performance anomalies. It includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your app. It's designed to help you continuously improve performance and usability. Features of AI include:</p>
+                <h2 id="going-serverless-with-safe">Going serverless with SAFE</h2>
+<p>With SAFE-Stack you can easily take advantage of serverless computing via <a href="https://azure.microsoft.com/en-us/services/functions/">Azure Functions</a>.</p>
+<p>With Functions-As-A-Service (FAAS) you can focus on building your business logic and don't need to worry about provisioning and maintaining servers (hence "serverless"). Azure Functions provides a managed compute platform with high reliability. If you use a "consumption plan" it scales on demand and you only get billed for the actual runtime of your code.</p>
+<h3 id="potential-use-cases">Potential use cases</h3>
+<p>For SAFE apps we see various use cases for FAAS:</p>
 <ul>
-<li><strong>Request tracking</strong>: monitoring every request, timing and response, with full correlation of operations within a request.</li>
-<li><strong>Dependency tracking</strong>: understand calls to third-party dependencies e.g. databases, web services etc.</li>
-<li><strong>Failures</strong>: Understand which failures are occurring on your site, how often and with full stack traces.</li>
-<li><strong>User behaviours</strong>: Understand user flows such as funnels and retention.</li>
-<li><strong>Custom Events and Metrics</strong>: You can easily create arbitrary metrics and events using the AI SDK for tracing and reporting.</li>
-<li><strong>Reporting Capabilities</strong>: Either use AI's built-in query language to create reports, or automatically export all data into a Storage Account for offline analytics.</li>
+<li>Running recurring jobs to create statistics or maintenance actions via timer triggers</li>
+<li>Running jobs that can be processed async like creating accountings or sending email </li>
+<li>Command processing in CQRS apps via message queues or HTTP triggers</li>
 </ul>
-<h2 id="basics-of-working-with-ai">Basics of working with AI</h2>
-<p>AI will automatically activate when you start running your SAFE application. You can locate your AI instance directly from within your SAFE Resource Group in the Azure Portal, or from the "Application Insights" link in the SAFE App Service.</p>
-<p><img alt="" src="../img/deploy-ai-1.png" /></p>
-<p>From your AI dashboard, you can drill down to trace all server requests:</p>
-<p><img alt="" src="../img/deploy-ai-2.png" /></p>
-<p>You can then drill into any specific request, such as the <code>api/init</code> route shown above, in order to see individual requests.</p>
-<p><img alt="" src="../img/deploy-ai-3.png" /></p>
-<p>From here, you can even track further into any individual call. AI has many more features, so it's worth reading the <a href="https://docs.microsoft.com/en-us/azure/application-insights/">extensive documentation</a> on the Azure website.</p>
-<h2 id="how-do-safe-apps-integrate-with-ai">How do SAFE apps integrate with AI?</h2>
-<p>Although AI supports monitoring for both client <em>and</em> server, at the current time, the SAFE template only supports the server mode (although you can add support for client events yourself). Server-side support includes:</p>
-<ul>
-<li>Support in the bundled ARM template to create a free AI instance along with your web application.</li>
-<li>Automatic configuration of your web application with connection details to the created AI instance.</li>
-<li>Application support for activating AI in code for e.g. custom events and metrics.</li>
-</ul>
-<p>AI integration is provided out-of-the-box in the template, since Giraffe uses the standard .NET Core Application Insights SDK in order to communicate with the AI service. It uses the standard AI middleware support for ASP .NET Core, which provides complete tracking of requests, dependencies, errors and live streaming.</p>
+<h2 id="editing-functions-in-the-azure-portal">Editing Functions in the Azure Portal</h2>
+<p>The <a href="https://portal.azure.com">Azure Portal</a> allows you to create and edit Functions and their source code via an online editor. </p>
+<p>For a short test go to the portal, click the "New" button and search for "Function App". Click through the wizard to create a new Function App. Open the app when it's created and add a new function. Pick "Timer" as scenario and F# as language.</p>
+<p>Replace the contents of function.json with:</p>
+<pre><code>{
+"bindings": [
+    {
+    "name": "myTimer",
+    "type": "timerTrigger",
+    "direction": "in",
+    "schedule": "0 * * * * *"
+    }
+],
+"disabled": false
+}
+</code></pre>
+<p>and replace the run.fsx with the following F# code:</p>
+<pre><code>open System
+
+let minutesSince (d: DateTime) =
+(DateTime.Now - d).TotalMinutes
+
+let run(myTimer: TimerInfo, log: TraceWriter) =
+let meetupStart = new DateTime(2017, 11, 8, 19, 0, 0)
+
+minutesSince meetupStart
+|&gt; int
+|&gt; sprintf "Our meetup has been running for %d minutes"
+|&gt; log.Info
+</code></pre>
+<p>Now observe the logs to see that the function runs every minute and outputs the message about the meetup duration.</p>
+<p>While it seems very convenient, the online editor should only be used for testing and prototyping. In SAFE-Stack you usually benefit from reusing your domain model at various places <a href="../feature-clientserver/">see Client/Server</a> - so we recommend to use "precompiled Azure Functions" as described below.</p>
+<h2 id="deployment">Deployment</h2>
+<p>In SAFE-Stack scenarios we recommend all deployments should be automated. Here, we discuss two options for deploying your functions apps into Azure.</p>
+<h3 id="azure-functions-core-tools">Azure Functions Core Tools</h3>
+<p>In the case of Function Apps the excellent <a href="https://github.com/Azure/azure-functions-core-tools">Azure Functions Core Tools</a> can be used. If you use core tools version 2 then the following should be added to your build/deploy script:</p>
+<pre><code>dotnet publish -c Release
+func azure functionapp publish [FunctionApp Name]
+</code></pre>
+<p>This will compile your Function App in release mode and push it to the Azure portal.</p>
+<p>In the case of a CI server etc., you will need to install the Functions Core Tools on the server and once per functions app log into the CI machine and explicitly authenticate it manually (see the Functions Core Tools docs).</p>
+<h3 id="https-upload">HTTPS Upload</h3>
+<p>Since Azure Functions sits on top of Azure App Service, the same mechanisms for deployment there also exist here. In this case, you can use the exact same HTTPS upload capabilities of the App Service to upload a zip of your functions app into your Functions app. The standard SAFE Template can generate this for you for the core SAFE application as part of the FAKE script; the exact same mechanism can be utilised for your functions app.</p>
+<p>As per the standard App Service, HTTPS upload uses a user/pass supplied in the header of the zip which is PUT into the functions app. This user / pass can be taken from the App Service in the Azure Portal directly, or extracted during deployment of your ARM template (as per the FAKE script does for the App Service).</p>
                 
                   
                 
@@ -808,8 +900,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../template-appservice/"
-              title="Deploy to App Service"
+          <a href="../feature-hmr/"
+              title="Hot Module Replacement"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -822,7 +914,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Deploy to App Service
+                Hot Module Replacement
               </span>
             </div>
           </a>
@@ -830,7 +922,7 @@
 
         <!-- Link to next page -->
         
-          <a href="../template-azure-registration/" title="Registering with Azure"
+          <a href="../faq-server/" title="Choosing your web server"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -839,7 +931,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Registering with Azure
+                Choosing your web server
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

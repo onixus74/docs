@@ -458,6 +458,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#testing-docker-image-locally" title="Testing docker image locally" class="md-nav__link">
+    Testing docker image locally
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#docker-image" title="Docker image" class="md-nav__link">
     Docker image
   </a>
@@ -624,6 +631,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-azurefunctions/" title="Working with Azure functions" class="md-nav__link">
+      Working with Azure functions
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -751,6 +770,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#testing-docker-image-locally" title="Testing docker image locally" class="md-nav__link">
+    Testing docker image locally
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#docker-image" title="Docker image" class="md-nav__link">
     Docker image
   </a>
@@ -830,15 +856,22 @@
 <h2 id="custom-fake-build-tasks">Custom FAKE build tasks</h2>
 <ol>
 <li><strong>Bundle</strong> - all necessary artifacts for both Server and Client are collected for following <code>Docker</code> target.</li>
-<li><strong>Docker</strong> - based on present <code>Dockerfile</code>, docker image is built and tagged using <code>dockerUser</code> and <code>dockerImageName</code> values from the script. </li>
+<li><strong>Docker</strong> - based on present <code>Dockerfile</code>, docker image is built and tagged using <code>dockerUser</code> and <code>dockerImageName</code> values from the script.</li>
+</ol>
+<blockquote>
+<p>Note: Before running the <code>Docker</code> target, make sure to modify the default <code>dockerUser</code> and <code>dockerImageName</code> values in script.</p>
+</blockquote>
+<h2 id="testing-docker-image-locally">Testing docker image locally</h2>
+<ol>
+<li>Make sure you have docker installed and created the template with <code>--deploy docker</code> option</li>
+<li>Run <code>fake build --target docker</code></li>
+<li>Run <code>docker run -d -it -p 8085:8085 {dockerUser}/{dockerImageName}</code></li>
+<li>Navigate to <code>{dockerHost}:8085</code> url</li>
 </ol>
 <h2 id="docker-image">Docker image</h2>
 <p>The image is based on <a href="https://hub.docker.com/r/microsoft/dotnet/">microsoft/dotnet:runtime</a>.
 Entrypoint for the image is <code>dotnet Server.dll</code> (with <code>/Server</code> working directory).
 To allow incoming traffic, port 8085 is exposed.</p>
-<blockquote>
-<p>Note: Before running the <code>Docker</code> target, make sure to modify the default <code>dockerUser</code> and <code>dockerImageName</code> values in script.</p>
-</blockquote>
 <h2 id="release-to-azure-app-service">Release to Azure App Service</h2>
 <p>The following part shows how to set up automatic deployment to <a href="https://azure.microsoft.com">Microsoft Azure</a>.</p>
 <h3 id="docker-hub">Docker Hub</h3>
