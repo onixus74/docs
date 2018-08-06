@@ -622,12 +622,12 @@
         },
         {
             "location": "/events/",
-            "text": "Upcoming Events\n\n\n\n\n\n\n\n\nTitle\n\n\nDate\n\n\nLocation\n\n\nWho\n\n\nType\n\n\n\n\n\n\n\n\n\n\nFunctional web programming in .NET\n\n\nSep 22 2018\n\n\nCambridge, UK\n\n\nCompositional IT\n\n\nFree\n\n\n\n\n\n\nF# Full Stack with SAFE\n\n\nSep 26 2018\n\n\nSan Francisco, USA\n\n\nLambda Factory\n\n\nCommercial\n\n\n\n\n\n\nSAFE Hackday\n\n\nOct 6 2018\n\n\nBirmingham, UK\n\n\nIan Russel\n\n\nFree\n\n\n\n\n\n\nCloud Programming with F#\n\n\nOct 25 2018\n\n\nBerlin, Germany\n\n\nCompositional IT\n\n\nCommercial\n\n\n\n\n\n\nFableConf / RemmiDemmi\n\n\nOct 26/27 2018\n\n\nBerlin, Germany\n\n\n\n\nCommercial\n\n\n\n\n\n\nF# development with SAFE\n\n\nNov 7 2018\n\n\nVienna, Austria\n\n\nLambda Factory\n\n\nCommercial",
+            "text": "Upcoming Events\n\n\n\n\n\n\n\n\nTitle\n\n\nDate\n\n\nLocation\n\n\nWho\n\n\nType\n\n\n\n\n\n\n\n\n\n\nSAFE Stack: Functional Web Programming in .NET\n\n\nSep 22 2018\n\n\nCambridge, UK\n\n\nCompositional IT\n\n\nFree\n\n\n\n\n\n\nF# Full Stack with SAFE\n\n\nSep 26 2018\n\n\nSan Francisco, USA\n\n\nLambda Factory\n\n\nCommercial\n\n\n\n\n\n\nSAFE Hackday\n\n\nOct 6 2018\n\n\nBirmingham, UK\n\n\nIan Russel\n\n\nFree\n\n\n\n\n\n\nCloud Programming with F#\n\n\nOct 25 2018\n\n\nBerlin, Germany\n\n\nCompositional IT\n\n\nCommercial\n\n\n\n\n\n\nFableConf / RemmiDemmi\n\n\nOct 26/27 2018\n\n\nBerlin, Germany\n\n\n\n\nCommercial\n\n\n\n\n\n\nF# development with SAFE\n\n\nNov 7 2018\n\n\nVienna, Austria\n\n\nLambda Factory\n\n\nCommercial",
             "title": "Events"
         },
         {
             "location": "/events/#upcoming-events",
-            "text": "Title  Date  Location  Who  Type      Functional web programming in .NET  Sep 22 2018  Cambridge, UK  Compositional IT  Free    F# Full Stack with SAFE  Sep 26 2018  San Francisco, USA  Lambda Factory  Commercial    SAFE Hackday  Oct 6 2018  Birmingham, UK  Ian Russel  Free    Cloud Programming with F#  Oct 25 2018  Berlin, Germany  Compositional IT  Commercial    FableConf / RemmiDemmi  Oct 26/27 2018  Berlin, Germany   Commercial    F# development with SAFE  Nov 7 2018  Vienna, Austria  Lambda Factory  Commercial",
+            "text": "Title  Date  Location  Who  Type      SAFE Stack: Functional Web Programming in .NET  Sep 22 2018  Cambridge, UK  Compositional IT  Free    F# Full Stack with SAFE  Sep 26 2018  San Francisco, USA  Lambda Factory  Commercial    SAFE Hackday  Oct 6 2018  Birmingham, UK  Ian Russel  Free    Cloud Programming with F#  Oct 25 2018  Berlin, Germany  Compositional IT  Commercial    FableConf / RemmiDemmi  Oct 26/27 2018  Berlin, Germany   Commercial    F# development with SAFE  Nov 7 2018  Vienna, Austria  Lambda Factory  Commercial",
             "title": "Upcoming Events"
         },
         {
