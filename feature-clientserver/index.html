@@ -574,15 +574,22 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#when-should-i-use-raw-http-vs-fable-remoting" title="When should I use raw HTTP vs Fable Remoting?" class="md-nav__link">
-    When should I use raw HTTP vs Fable Remoting?
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-state" title="Sharing State" class="md-nav__link">
+    Sharing State
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#which-technology-should-i-use" title="Which technology should I use?" class="md-nav__link">
+    Which technology should I use?
+  </a>
   
 </li>
       
@@ -594,6 +601,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-elmish-bridge/" title="Elmish on the server" class="md-nav__link">
+      Elmish on the server
+    </a>
   </li>
 
         
@@ -813,15 +832,22 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#when-should-i-use-raw-http-vs-fable-remoting" title="When should I use raw HTTP vs Fable Remoting?" class="md-nav__link">
-    When should I use raw HTTP vs Fable Remoting?
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-state" title="Sharing State" class="md-nav__link">
+    Sharing State
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#which-technology-should-i-use" title="Which technology should I use?" class="md-nav__link">
+    Which technology should I use?
+  </a>
   
 </li>
       
@@ -936,9 +962,12 @@ let server : ICustomer = {
 </code></pre>
 
 <p>Notice here, there is no need to create routes, or worry about HTTP verbs, or even involve yourself with the Giraffe pipeline.</p>
-<h3 id="when-should-i-use-raw-http-vs-fable-remoting">When should I use raw HTTP vs Fable Remoting?</h3>
+<h2 id="sharing-state">Sharing State</h2>
+<p>With the addition of the <a href="../feature-elmish-bridge">Elmish.Bridge</a> library, it's now possible to maintain a stateful server and send notifications to clients to maintain state.</p>
+<h2 id="which-technology-should-i-use">Which technology should I use?</h2>
 <p>Fable Remoting provides an excellent way to quickly get up and running with the SAFE stack. You can rapidly create contracts between client / server and have guaranteed contracts between both client and server. However, note that Fable Remoting is not designed for use as an "open" API for consumption by multiple client. It also forces all HTTP traffic to be delivered as a POST, which cannot be cached by the browser. If you're using a "closed" app without exposing an API to other consumers, and do not need close control of the HTTP channel, consider using Fable.Remoting.</p>
 <p>Alternatively, the raw HTTP model provided by Saturn with <code>scope { }</code> requires you to construct routes manually and does not guarantee that the client and endpoint have the same contract (you have to specify the same type on both sides yourself). However, Saturn gives you total control over the routing and verbs used. If you have a public API that is exposed not just to your own application but to third-parties, or you need more fine grained control over your routes and data, you should use this approach.</p>
+<p>Lastly, Elmish Bridge provides an alternative way of modelling client/server communication. Unlike Fable Remoting, Elmish Bridge provides the same Elmish model on the server as well as the client, as well as the ability to send notificatiosn from the server back to the client via websockets.</p>
 <p>Alternatively, consider using a combination of both Remoting and Saturn endpoints - Remoting for those that are used "internally" by your application, and Saturn for those exposed to external callers.</p>
 <table>
 <thead>
@@ -946,6 +975,7 @@ let server : ICustomer = {
 <th></th>
 <th align="center">Fable.Remoting</th>
 <th align="center">Raw HTTP</th>
+<th align="center">Elmish.Bridge</th>
 </tr>
 </thead>
 <tbody>
@@ -953,21 +983,37 @@ let server : ICustomer = {
 <td>Client / Server support</td>
 <td align="center">Very easy</td>
 <td align="center">Easy</td>
+<td align="center">Very Easy</td>
+</tr>
+<tr>
+<td>State model</td>
+<td align="center">Stateless</td>
+<td align="center">Stateless</td>
+<td align="center">Stateful</td>
 </tr>
 <tr>
 <td>"Open" API?</td>
 <td align="center">No</td>
 <td align="center">Yes</td>
+<td align="center">No</td>
 </tr>
 <tr>
 <td>HTTP Verbs?</td>
 <td align="center">POST</td>
 <td align="center">Fully Configurable</td>
+<td align="center">None</td>
+</tr>
+<tr>
+<td>Push messages?</td>
+<td align="center">No</td>
+<td align="center">No</td>
+<td align="center">Yes</td>
 </tr>
 <tr>
 <td>Pipeline Control?</td>
 <td align="center">Limited</td>
 <td align="center">Full</td>
+<td align="center">Limited</td>
 </tr>
 </tbody>
 </table>
@@ -1019,7 +1065,7 @@ let server : ICustomer = {
 
         <!-- Link to next page -->
         
-          <a href="../feature-ssr/" title="Server Side Rendering"
+          <a href="../feature-elmish-bridge/" title="Elmish on the server"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -1028,7 +1074,7 @@ let server : ICustomer = {
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Server Side Rendering
+                Elmish on the server
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
