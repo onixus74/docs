@@ -829,7 +829,7 @@
 <li>The "back-end" .NET web server which hosts your API endpoints and other server-generated content. This uses Kestrel on ASP .NET out of the box (although you can opt for <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers">other options</a>).</li>
 <li>A "front-end" web server which hosts your Fable application. The SAFE template uses the <a href="https://github.com/webpack/webpack-dev-server">Webpack Dev Server</a> for this.</li>
 </ul>
-<p><img alt="" src="img\faq-build-1.png" /></p>
+<p><img alt="" src="../img/faq-build-1.png" /></p>
 <p>The backend build makes use of <code>dotnet watch</code> to allow you to make changes to your server-side application and have the server automatically restart with the latest changes. Since your back-end applications will typically be stateless, this permits a rapid development workflow.</p>
 <p>On the client side, your code is compiled using webpack. This provides many benefits for working with javascript, such as minification and bundling, as well as <a href="feature-hmr">hot module replacement</a>, a feature made possible when using the webpack dev server. This means that you can continually make changes to your client application code and can rapidly see the results reflected in your browser, without the need to fully reload the application.</p>
 <h3 id="webpack-dev-server">Webpack Dev Server</h3>
@@ -837,7 +837,7 @@
 <h2 id="running-safe-applications-in-production">Running SAFE applications in production</h2>
 <p>In a production environment, you won't typically use the webpack dev server. Instead, it's more common to use webpack as a one-off compiler step to create your bundled javascript from your Fable app (plus dependencies), and then deploy this along with your back-end web server which also hosts that content directly. For example, you can use Saturn to host the static content required by the application e.g. HTML, JS and CSS files etc. as well as your back-end APIs. This fits very well with standard CI / CD processes, as a build step in your FAKE script or VSTS / AppVeyor / Travis step etc.</p>
 <p>Both the <a href="template-appservice">Azure</a> and <a href="template-docker">Docker</a> configuration options will do this automatically.</p>
-<p><img alt="" src="img\faq-build-2.png" /></p>
+<p><img alt="" src="../img/faq-build-2.png" /></p>
 <h3 id="client-asset-hosting-alternatives">Client asset hosting alternatives</h3>
 <p>Rather than hosting your client-side content and application inside your web server, you can opt to host your static content from some other service that supports hosting of HTTP content, such as Azure Blobs, or a content hosting service. In such a case, you'll need to consider how to route traffic to your back-end API from your client application (as they are hosted on different domains), as well as handle any potential CORS issues.</p>
                 
