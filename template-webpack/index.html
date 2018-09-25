@@ -13,7 +13,7 @@
         <meta name="description" content="Documentation for SAFE">
       
       
-        <link rel="canonical" href="http://safe-stack.github.io/docs/component-fable/">
+        <link rel="canonical" href="http://safe-stack.github.io/docs/template-webpack/">
       
       
         <meta name="author" content="SAFE Stack">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Learn about Fable - SAFE Documentation</title>
+        <title>Template webpack - SAFE Documentation</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#fable-in-safe" tabindex="1" class="md-skip">
+      <a href="../#webpack-development-server-and-your-web-server" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 SAFE Documentation
               </span>
               <span class="md-header-nav__topic">
-                Learn about Fable
+                Template webpack
               </span>
             
           
@@ -293,12 +293,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Components of SAFE
@@ -338,63 +336,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Learn about Fable
-      </label>
-    
-    <a href="./" title="Learn about Fable" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../component-fable/" title="Learn about Fable" class="md-nav__link">
       Learn about Fable
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-fable" title="What is Fable?" class="md-nav__link">
-    What is Fable?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-fable-integrate-with-safe" title="How does Fable integrate with SAFE?" class="md-nav__link">
-    How does Fable integrate with SAFE?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fable-and-webpack" title="Fable and webpack" class="md-nav__link">
-    Fable and webpack
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -741,29 +687,13 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-fable" title="What is Fable?" class="md-nav__link">
-    What is Fable?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-does-fable-integrate-with-safe" title="How does Fable integrate with SAFE?" class="md-nav__link">
-    How does Fable integrate with SAFE?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fable-and-webpack" title="Fable and webpack" class="md-nav__link">
-    Fable and webpack
+  <a href="#webpack-development-server-and-your-web-server" title="Webpack Development Server and your Web Server" class="md-nav__link">
+    Webpack Development Server and your Web Server
   </a>
   
 </li>
@@ -784,21 +714,17 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/component-fable.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/template-webpack.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="fable-in-safe"><a href="http://fable.io/">Fable</a> in SAFE</h1>
-<h2 id="what-is-fable">What is Fable?</h2>
-<p>Fable is an F#-to-JavaScript (JS) compiler powered by <a href="https://babeljs.io/">Babel</a>, designed to produce readable and standard JS code. Fable brings all the power of F# to the JS ecosystem, with support for most of the F# core library as well the most commonly used .NET APIs.</p>
-<h2 id="how-does-fable-integrate-with-safe">How does Fable integrate with SAFE?</h2>
-<p>Fable is much more than an F#-to-JS compiler - it also provides <em>rich</em> integration with the JS ecosystem which means that you can use JS libraries from F# (and vice versa) as well as make use of standard JS tools. There are two "sides" to Fable that work together to allow F# to run within the JS world - a .NET tooling component and a JS tooling component:</p>
-<p><img alt="" src="../img/safe-fable-1.png" /></p>
-<p>It's important to understand the Fable is not simply an application that takes in F# and emits JS - instead, the dotnet fable application emits an intermediary file (a Babel Abstract Syntax Tree), which in turn is converted by webpack into well-written JS.</p>
-<h2 id="fable-and-webpack">Fable and webpack</h2>
-<p>Fable's "JavaScript" side is normally hosted within the context of <a href="https://webpack.js.org/">webpack</a>, a powerful bundling tool. You'll normally see a <code>webpack.config.js</code> file in the client folder of your SAFE applications. This file tells webpack how to emit JS from F# files and hosts the Fable webpack plugin, <code>fable-loader</code>.</p>
-<p>Using webpack also provides many advantages - for example, we as developers can control how JS is rendered through standard tools that exist in the JS ecosystem, whilst also using features such as <a href="feature-hmr">Hot Module replacement</a> and Source Maps.</p>
-<p>Creating a webpack config file isn't the easiest thing in the world, so the <a href="template-overview">SAFE Template</a> already has one pre-built that contains the basics to get you up and running immediately.</p>
-<p>Learn more about Fable <a href="http://fable.io/">here</a>.</p>
+                  <h1>Template webpack</h1>
+                
+                <h3 id="webpack-development-server-and-your-web-server">Webpack Development Server and your Web Server</h3>
+<ul>
+<li>Explain the webpack steps</li>
+<li>Explain port forwarding</li>
+<li>Explain static content</li>
+</ul>
                 
                   
                 
@@ -819,54 +745,6 @@
 <footer class="md-footer">
 
   <!-- Link to previous and/or next page -->
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-
-        <!-- Link to previous page -->
-        
-          <a href="/component-azure/"
-              title="Learn about Azure"
-              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
-              rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back
-                    md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch
-                  md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Learn about Azure
-              </span>
-            </div>
-          </a>
-        
-
-        <!-- Link to next page -->
-        
-          <a href="/component-elmish/" title="Learn about Elmish"
-              class="md-flex md-footer-nav__link md-footer-nav__link--next"
-              rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch
-                  md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Learn about Elmish
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward
-                    md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
 
   <!-- Further information -->
