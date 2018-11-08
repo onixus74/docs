@@ -997,7 +997,7 @@ async {
 <h2 id="which-technology-should-i-use">Which technology should I use?</h2>
 <p>Fable Remoting provides an excellent way to quickly get up and running with the SAFE stack. You can rapidly create contracts and have guaranteed type-safety between both client and server. Considor using remoting for rapid prototyping, since JSON serialization and Http routing is handled by the library, you only think of your client-server code in terms of types and stateless functions. If you need full control over the HTTP channel for returning specific status codes, using custom HTTP verbs or working with headers, then remoting is probably not for you. </p>
 <p>Alternatively, the raw HTTP model provided by Saturn with <code>scope { }</code> requires you to construct routes manually and does not guarantee that the client and endpoint have the same contract (you have to specify the same type on both sides yourself). However, Saturn gives you total control over the routing and verbs used. If you have a public API that is exposed not just to your own application but to third-parties, or you need more fine grained control over your routes and data, you should use this approach.</p>
-<p>Lastly, Elmish Bridge provides an alternative way of modelling client/server communication. Unlike Fable Remoting, Elmish Bridge provides the same Elmish model on the server as well as the client, as well as the ability to send notificatiosn from the server back to the client via websockets.</p>
+<p>Lastly, Elmish Bridge provides an alternative way of modelling client/server communication. Unlike Fable Remoting, Elmish Bridge provides the same Elmish model on the server as well as the client, as well as the ability to send notifications from the server back to connected clients via websockets. However, the Bridge model is inherently stateful, which means that a server restart could impact state management across all connected clients.</p>
 <p>Alternatively, consider using a combination of both Remoting and Saturn endpoints - Remoting for those that are used "internally" by your application, and Saturn for those exposed to external callers.</p>
 <table>
 <thead>
@@ -1023,13 +1023,13 @@ async {
 </tr>
 <tr>
 <td>"Open" API?</td>
-<td align="center">YES</td>
+<td align="center">Yes</td>
 <td align="center">Yes</td>
 <td align="center">No</td>
 </tr>
 <tr>
 <td>HTTP Verbs?</td>
-<td align="center">POST and GET</td>
+<td align="center">POST, GET</td>
 <td align="center">Fully Configurable</td>
 <td align="center">None</td>
 </tr>
