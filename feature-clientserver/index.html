@@ -573,8 +573,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sharing-data-using-fableremoting" title="Sharing data using Fable.Remoting" class="md-nav__link">
-    Sharing data using Fable.Remoting
+  <a href="#data-communication-using-fableremoting" title="Data communication using Fable.Remoting" class="md-nav__link">
+    Data communication using Fable.Remoting
   </a>
   
 </li>
@@ -831,8 +831,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sharing-data-using-fableremoting" title="Sharing data using Fable.Remoting" class="md-nav__link">
-    Sharing data using Fable.Remoting
+  <a href="#data-communication-using-fableremoting" title="Data communication using Fable.Remoting" class="md-nav__link">
+    Data communication using Fable.Remoting
   </a>
   
 </li>
@@ -882,7 +882,7 @@
 <p>Sharing your domain types and contracts between client and server is extremely simple. Thanks to Fable's excellent F# transpilation into Javascript, you can use all standard F# language features such as Records, Tuples and Discriminated Unions without worry. To share types across both your client and server project, first create a file in your repository called e.g <code>Shared.fs</code>.
 <img alt="" src="../img/client-server-01.png" /></p>
 <p>Then, create types in the file as needed e.g</p>
-<pre><code class="fsharp">type Customer = { Name : string }
+<pre><code class="fsharp">type Customer = { Id : int; Name : string }
 </code></pre>
 
 <p>Reference this file to your server project. You can now reference those types in the server.</p>
@@ -912,7 +912,7 @@
 <h3 id="sharing-data-with-saturn">Sharing data with Saturn</h3>
 <p>Sharing data using Saturn is very simple. Start by creating a function in your server that returns some data:</p>
 <pre><code class="fsharp">let loadCustomersFromDb() =
-    [ { Name = &quot;Joe Bloggs&quot; } ]
+    [ { Id = 1; Name = &quot;Joe Bloggs&quot; } ]
 </code></pre>
 
 <p>Next, create a method which returns the data as JSON within Giraffe's HTTP context.</p>
@@ -937,7 +937,7 @@ let getCustomers next ctx =
 
 <p>Finally, call the endpoint from your client application.</p>
 <pre><code class="fsharp">promise {    
-    let! customers = Fetch.fetchAs&lt;Customer array&gt; (sprintf &quot;api/customers&quot;) []
+    let! customers = Fetch.fetchAs&lt;Customer list&gt; (sprintf &quot;api/customers&quot;) []
     // do more with customers here...
 }
 </code></pre>
@@ -946,31 +946,56 @@ let getCustomers next ctx =
 <h4 id="turning-on-fables-json-converter">Turning on Fable's JSON Converter</h4>
 <p>By default, serialization between Fable and Giraffe <strong>is not compatible</strong>. In order to fix this, you must replace the JSON converter in Giraffe with Fable's own <code>IJsonSerializer</code>.</p>
 <p>If you are using the <a href="safe-template">SAFE Template</a>, this will automatically be done for you - see the <a href="https://github.com/SAFE-Stack/SAFE-template/blob/master/Content/src/Server/ServerSaturn.fs#L40L44"><code>config</code></a> function in <code>Server.fs</code>.</p>
-<h3 id="sharing-data-using-fableremoting">Sharing data using Fable.Remoting</h3>
-<p>As an alternative to raw HTTP, you can also use the <a href="https://github.com/Zaid-Ajaj/Fable.Remoting">Fable.Remoting</a> library, which provides an RPC-style mechanism for calling server endpoints.</p>
-<p>In our case, instead of creating a <code>scope { }</code> on the server and using <code>fetch</code> on the client, you create a simple <em>protocol</em> which contains methods exposed by the server:</p>
-<pre><code class="fsharp">type ICustomer = {
-    customers : unit -&gt; Async&lt;Customer array&gt;
-}
-
-let server : ICustomer = {
-    customers = fun () -&gt; async { return loadCustomersFromDb() }
+<h3 id="data-communication-using-fableremoting">Data communication using Fable.Remoting</h3>
+<p>Alongside raw HTTP, you can also use <a href="https://github.com/Zaid-Ajaj/Fable.Remoting">Fable.Remoting</a>, <em>remoting</em> for short,  which provides an RPC-style mechanism for calling server endpoints. Remoting lets you define you client-server interactions as a record type, this type is commonly referred to as the <em>protocol</em> or <em>contract</em> that is shared between the server and the client. </p>
+<p>Each field of the record is either of type <code>Async&lt;T&gt;</code> or a function that returns <code>Async&lt;T&gt;</code>, for example:</p>
+<pre><code class="fsharp">type ICustomerApi = {
+    getCustomers : unit -&gt; Async&lt;Customer list&gt;
+    findCustomerByName : string -&gt; Async&lt;Customer option&gt;
 }
 </code></pre>
 
-<p>On the client, you need only create a proxy for the protocol and then can call methods on it directly.</p>
-<pre><code class="fsharp">async {
-    let server = Proxy.remoting&lt;ICustomer&gt; {()}
-    let! customers = server.customers()
-    /// ...
+<p>The supported types used within the protocol can be any F# type: primitive values (int, string, DateTime, etc.), records, options, discrimincated unions, choice, result, maps, lists, arrays, tuples or any combination of them. </p>
+<p>On the server you would implement the protocol:</p>
+<pre><code class="fs">let getCustomers() = 
+    async {
+        return [
+            { Id = 1; Name = &quot;John Doe&quot; }
+            { Id = 2; Name = &quot;Jane Smith&quot; }
+        ]
+    }
+
+let findCustomerByName (name: string) = 
+    async {
+        let! allCustomers = getCustomers()
+        return allCustomers |&gt; List.tryFind (fun c -&gt; c.Name = name)
+    }
+
+
+let customerApi : ICustomerApi = {
+    getCustomers = getCustomers
+    findCustomerByName = findCustomerByName
+} 
+</code></pre>
+
+<p>After <a href="https://zaid-ajaj.github.io/Fable.Remoting/src/saturn.html">exposing a HttpHandler</a> from <code>customerApi</code> you can start calling the API from the client. </p>
+<pre><code class="fsharp">module Server = 
+    let api : ICustomerApi = 
+        Remoting.createApi()
+        |&gt; Remoting.buildProxy&lt;ICustomerApi&gt;
+
+async {
+    let! customers = server.getCustomers()
+    for customer in customers do
+        printfn &quot;#%d =&gt; %s&quot; customer.Id customer.Name
 }
 </code></pre>
 
-<p>Notice here, there is no need to create routes, or worry about HTTP verbs, or even involve yourself with the Giraffe pipeline.</p>
+<p>Notice here, there is no need to create routes, JSON serialization, worry about HTTP verbs, or even involve yourself with the Giraffe pipeline. If you open your browser network tab, you can inspect what remoting is doing behind the scenes with <a href="https://zaid-ajaj.github.io/Fable.Remoting/src/raw-http.html">raw http communication</a>. </p>
 <h2 id="sharing-state">Sharing State</h2>
 <p>With the addition of the <a href="../feature-elmish-bridge/">Elmish.Bridge</a> library, it's now possible to maintain a stateful server and send notifications to clients to maintain state.</p>
 <h2 id="which-technology-should-i-use">Which technology should I use?</h2>
-<p>Fable Remoting provides an excellent way to quickly get up and running with the SAFE stack. You can rapidly create contracts between client / server and have guaranteed contracts between both client and server. However, note that Fable Remoting is not designed for use as an "open" API for consumption by multiple client. It also forces all HTTP traffic to be delivered as a POST, which cannot be cached by the browser. If you're using a "closed" app without exposing an API to other consumers, and do not need close control of the HTTP channel, consider using Fable.Remoting.</p>
+<p>Fable Remoting provides an excellent way to quickly get up and running with the SAFE stack. You can rapidly create contracts and have guaranteed type-safety between both client and server. Considor using remoting for rapid prototyping, since JSON serialization and Http routing is handled by the library, you only think of your client-server code in terms of types and stateless functions. If you need full control over the HTTP channel for returning specific status codes, using custom HTTP verbs or working with headers, then remoting is probably not for you. </p>
 <p>Alternatively, the raw HTTP model provided by Saturn with <code>scope { }</code> requires you to construct routes manually and does not guarantee that the client and endpoint have the same contract (you have to specify the same type on both sides yourself). However, Saturn gives you total control over the routing and verbs used. If you have a public API that is exposed not just to your own application but to third-parties, or you need more fine grained control over your routes and data, you should use this approach.</p>
 <p>Lastly, Elmish Bridge provides an alternative way of modelling client/server communication. Unlike Fable Remoting, Elmish Bridge provides the same Elmish model on the server as well as the client, as well as the ability to send notificatiosn from the server back to the client via websockets.</p>
 <p>Alternatively, consider using a combination of both Remoting and Saturn endpoints - Remoting for those that are used "internally" by your application, and Saturn for those exposed to external callers.</p>
@@ -998,13 +1023,13 @@ let server : ICustomer = {
 </tr>
 <tr>
 <td>"Open" API?</td>
-<td align="center">No</td>
+<td align="center">YES</td>
 <td align="center">Yes</td>
 <td align="center">No</td>
 </tr>
 <tr>
 <td>HTTP Verbs?</td>
-<td align="center">POST</td>
+<td align="center">POST and GET</td>
 <td align="center">Fully Configurable</td>
 <td align="center">None</td>
 </tr>
