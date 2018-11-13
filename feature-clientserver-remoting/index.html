@@ -896,13 +896,10 @@ let customerApi : ICustomerApi = {
 
 <h2 id="3-consume-the-protocol-on-the-client">3. Consume the protocol on the client</h2>
 <p>After <a href="https://zaid-ajaj.github.io/Fable.Remoting/src/saturn.html">exposing an HttpHandler</a> from <code>customerApi</code> you can start calling the API from the client. </p>
-<pre><code class="fsharp">module Server = 
-    let api : ICustomerApi = 
-        Remoting.createApi()
-        |&gt; Remoting.buildProxy&lt;ICustomerApi&gt;
+<pre><code class="fsharp">let api = Remoting.createApi() |&gt; Remoting.buildProxy&lt;ICustomerApi&gt;
 
 async {
-    let! customers = server.getCustomers()
+    let! customers = api.getCustomers()
     for customer in customers do
         printfn &quot;#%d =&gt; %s&quot; customer.Id customer.Name
 }
