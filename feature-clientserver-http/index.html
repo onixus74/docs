@@ -587,15 +587,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-expose-data-through-saturn" title="2. Expose data through Saturn." class="md-nav__link">
-    2. Expose data through Saturn.
+  <a href="#2-expose-data-through-saturn" title="2. Expose data through Saturn" class="md-nav__link">
+    2. Expose data through Saturn
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-consume-the-endpoint-from-the-client" title="3. Consume the endpoint from the client." class="md-nav__link">
-    3. Consume the endpoint from the client.
+  <a href="#3-consume-the-endpoint-from-the-client" title="3. Consume the endpoint from the client" class="md-nav__link">
+    3. Consume the endpoint from the client
   </a>
   
 </li>
@@ -829,15 +829,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-expose-data-through-saturn" title="2. Expose data through Saturn." class="md-nav__link">
-    2. Expose data through Saturn.
+  <a href="#2-expose-data-through-saturn" title="2. Expose data through Saturn" class="md-nav__link">
+    2. Expose data through Saturn
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-consume-the-endpoint-from-the-client" title="3. Consume the endpoint from the client." class="md-nav__link">
-    3. Consume the endpoint from the client.
+  <a href="#3-consume-the-endpoint-from-the-client" title="3. Consume the endpoint from the client" class="md-nav__link">
+    3. Consume the endpoint from the client
   </a>
   
 </li>
@@ -877,7 +877,7 @@ let getCustomers next ctx =
 
 <p>You can opt to combine both of the above functions into one, depending on your preferences, but it's often good practice to separate your data access from serving data in HTTP endpoints.</p>
 <p>Also note the <code>next</code> and <code>ctx</code> arguments. These are used by Giraffe as part of its <a href="https://github.com/giraffe-fsharp/Giraffe/blob/master/DOCUMENTATION.md#fundamentals">HTTP pipeline</a> and are required by the <code>json</code> function (Note you can also use <code>Successful.Ok</code> instead of <code>json</code>, which will offer XML serialization as well).</p>
-<h2 id="2-expose-data-through-saturn">2. Expose data through Saturn.</h2>
+<h2 id="2-expose-data-through-saturn">2. Expose data through Saturn</h2>
 <p>Now expose the api method using <a href="https://saturnframework.github.io/docs/api/scope/">Saturn's</a> <code>router</code> construct and add it to your overall application scope:</p>
 <pre><code class="fsharp">let myApis = router {
     get &quot;/api/customers/&quot; getCustomers
@@ -890,7 +890,7 @@ let getCustomers next ctx =
 }
 </code></pre>
 
-<h2 id="3-consume-the-endpoint-from-the-client">3. Consume the endpoint from the client.</h2>
+<h2 id="3-consume-the-endpoint-from-the-client">3. Consume the endpoint from the client</h2>
 <p>Finally, call the endpoint from your client application.</p>
 <pre><code class="fsharp">promise {    
     let! customers = Fetch.fetchAs&lt;Customer list&gt; &quot;api/customers&quot; (Decode.Auto.generateDecoder()) []

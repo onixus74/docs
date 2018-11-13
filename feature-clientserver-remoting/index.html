@@ -592,15 +592,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-defining-a-protocol" title="1. Defining a protocol" class="md-nav__link">
-    1. Defining a protocol
+  <a href="#1-define-a-protocol" title="1. Define a protocol" class="md-nav__link">
+    1. Define a protocol
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-implementing-a-protocol-on-the-server" title="2. Implementing a protocol on the server" class="md-nav__link">
-    2. Implementing a protocol on the server
+  <a href="#2-implement-the-protocol-on-the-server" title="2. Implement the protocol on the server" class="md-nav__link">
+    2. Implement the protocol on the server
   </a>
   
 </li>
@@ -815,15 +815,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-defining-a-protocol" title="1. Defining a protocol" class="md-nav__link">
-    1. Defining a protocol
+  <a href="#1-define-a-protocol" title="1. Define a protocol" class="md-nav__link">
+    1. Define a protocol
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-implementing-a-protocol-on-the-server" title="2. Implementing a protocol on the server" class="md-nav__link">
-    2. Implementing a protocol on the server
+  <a href="#2-implement-the-protocol-on-the-server" title="2. Implement the protocol on the server" class="md-nav__link">
+    2. Implement the protocol on the server
   </a>
   
 </li>
@@ -849,7 +849,7 @@
                 
                 <h1 id="data-sharing-with-fableremoting">Data sharing with Fable.Remoting</h1>
 <p>Alongside raw HTTP, you can also use <a href="https://github.com/Zaid-Ajaj/Fable.Remoting">Fable.Remoting</a>, which provides an RPC-style mechanism for calling server endpoints. With Remoting, you don't need to worry about the details of serialization or of how to consume the endpoint - instead, remoting lets you define you client-server interactions as a shared <em>type</em> that is commonly referred to as a <em>protocol</em> or <em>contract</em>.</p>
-<h2 id="1-defining-a-protocol">1. Defining a protocol</h2>
+<h2 id="1-define-a-protocol">1. Define a protocol</h2>
 <p>Each field of the record is either of type <code>Async&lt;T&gt;</code> or a function that returns <code>Async&lt;T&gt;</code>, for example:</p>
 <pre><code class="fsharp">type ICustomerApi = {
     getCustomers : unit -&gt; Async&lt;Customer list&gt;
@@ -858,7 +858,7 @@
 </code></pre>
 
 <p>The supported types used within the protocol can be any F# type: primitive values (int, string, DateTime, etc.), records, options, discrimincated unions or collections etc.</p>
-<h2 id="2-implementing-a-protocol-on-the-server">2. Implementing a protocol on the server</h2>
+<h2 id="2-implement-the-protocol-on-the-server">2. Implement the protocol on the server</h2>
 <p>On the server you would implement the protocol as follows:</p>
 <pre><code class="fsharp">let getCustomers() =
     async {
@@ -877,9 +877,9 @@ let findCustomerByName (name: string) =
 let customerApi : ICustomerApi = {
     getCustomers = getCustomers
     findCustomerByName = findCustomerByName
-} 
+} ```
 
-## 3. Consuming a protocol on the client```
+## 3. Consume the protocol on the client
 After [exposing an HttpHandler](https://zaid-ajaj.github.io/Fable.Remoting/src/saturn.html) from `customerApi` you can start calling the API from the client. 
 
 ```fsharp
