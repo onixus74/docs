@@ -13,7 +13,7 @@
         <meta name="description" content="Documentation for SAFE">
       
       
-        <link rel="canonical" href="http://safe-stack.github.io/docs/feature-elmish-bridge/">
+        <link rel="canonical" href="http://safe-stack.github.io/docs/feature-clientserver-http/">
       
       
         <meta name="author" content="SAFE Stack">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Elmish on the server - SAFE Documentation</title>
+        <title>Messaging using HTTP - SAFE Documentation</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#how-does-elmish-work-on-the-server" tabindex="1" class="md-skip">
+      <a href="../#client-server-communication-over-http" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 SAFE Documentation
               </span>
               <span class="md-header-nav__topic">
-                Elmish on the server
+                Messaging using HTTP
               </span>
             
           
@@ -506,10 +506,43 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1" checked>
+    
+    <label class="md-nav__link" for="nav-7-1">
+      Client / Server Sharing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        Client / Server Sharing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../feature-clientserver/" title="Client/Server communication" class="md-nav__link">
-      Client/Server communication
+    <a href="../feature-clientserver/" title="Sharing Overview" class="md-nav__link">
+      Sharing Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-clientserver-basics/" title="Sharing Types and Code" class="md-nav__link">
+      Sharing Types and Code
     </a>
   </li>
 
@@ -525,54 +558,44 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Elmish on the server
+        Messaging using HTTP
       </label>
     
-    <a href="./" title="Elmish on the server" class="md-nav__link md-nav__link--active">
-      Elmish on the server
+    <a href="./" title="Messaging using HTTP" class="md-nav__link md-nav__link--active">
+      Messaging using HTTP
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-does-elmish-work-on-the-server" title="How does Elmish work on the server?" class="md-nav__link">
-    How does Elmish work on the server?
+  <a href="#1-load-your-data" title="1. Load your data" class="md-nav__link">
+    1. Load your data
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-simple-example" title="A simple example" class="md-nav__link">
-    A simple example
+  <a href="#2-expose-data-through-saturn" title="2. Expose data through Saturn." class="md-nav__link">
+    2. Expose data through Saturn.
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-to-use-elmishbridge" title="When to use Elmish.Bridge" class="md-nav__link">
-    When to use Elmish.Bridge
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#things-to-consider" title="Things to consider" class="md-nav__link">
-    Things to consider
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#learn-more-about-elmishbridge" title="Learn more about Elmish.Bridge" class="md-nav__link">
-    Learn more about Elmish.Bridge
+  <a href="#3-consume-the-endpoint-from-the-client" title="3. Consume the endpoint from the client." class="md-nav__link">
+    3. Consume the endpoint from the client.
   </a>
   
 </li>
@@ -585,6 +608,47 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-clientserver-remoting/" title="Messaging with Protocols" class="md-nav__link">
+      Messaging with Protocols
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-clientserver-bridge/" title="Stateful Messaging through Bridge" class="md-nav__link">
+      Stateful Messaging through Bridge
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-clientserver-serialization/" title="Serialization in SAFE" class="md-nav__link">
+      Serialization in SAFE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -751,41 +815,29 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-does-elmish-work-on-the-server" title="How does Elmish work on the server?" class="md-nav__link">
-    How does Elmish work on the server?
+  <a href="#1-load-your-data" title="1. Load your data" class="md-nav__link">
+    1. Load your data
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-simple-example" title="A simple example" class="md-nav__link">
-    A simple example
+  <a href="#2-expose-data-through-saturn" title="2. Expose data through Saturn." class="md-nav__link">
+    2. Expose data through Saturn.
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-to-use-elmishbridge" title="When to use Elmish.Bridge" class="md-nav__link">
-    When to use Elmish.Bridge
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#things-to-consider" title="Things to consider" class="md-nav__link">
-    Things to consider
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#learn-more-about-elmishbridge" title="Learn more about Elmish.Bridge" class="md-nav__link">
-    Learn more about Elmish.Bridge
+  <a href="#3-consume-the-endpoint-from-the-client" title="3. Consume the endpoint from the client." class="md-nav__link">
+    3. Consume the endpoint from the client.
   </a>
   
 </li>
@@ -806,79 +858,47 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/feature-elmish-bridge.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/feature-clientserver-http.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Elmish on the server</h1>
-                
-                <p>Using F# on both client and server is at the core of the SAFE stack, as it simplifies the way we think about building web applications by using the same language, idioms and in many cases sharing our code and domain models.</p>
-<p>However, building a client and a server app requires a fundamentally different way of thinking. On the server side we build <a href="component-saturn">stateless APIs in Saturn</a> that map HTTP requests to internal functionality, whereas on the frontend we use the Elmish model, implementing the <a href="component-elmish">model-view-update pattern</a>: a stateful pattern that lets us think about the application state as it evolves while the application running. </p>
-<p>Even though we use the same language across platforms, applying different these two different programming models forces us to switch our way of thinking back and forth when writing code for the client and for the server. This is where the <a href="https://github.com/Nhowka/Elmish.Bridge">Elmish.Bridge</a> library comes into play: it brings the Elmish programming model <em>to the server</em> and unifies the way we write the application as a whole.</p>
-<h2 id="how-does-elmish-work-on-the-server">How does Elmish work on the server?</h2>
-<p>Think of Elmish on the server as the model-view-update pattern but <em>without the view part</em>. Instead, you only need to implement <code>init</code> and <code>update</code> functions to manage the <em>server</em> state as it evolves while the server is running.</p>
-<ul>
-<li>Server state can contain data that is relevant to a single or all clients</li>
-<li>The dispatch loop running on the server is connected to the dispatch loop on the client via a <em>persistent stateful websocket connection</em></li>
-<li>The <code>update</code> functions on client and server can exchange data via message passing.</li>
-</ul>
-<h2 id="a-simple-example">A simple example</h2>
-<p>Let's see a simple example of how this might work in practice:</p>
-<pre><code class="fsharp">// Client-side 
-let update msg state = 
-    match msg with 
-    | LoadUsers -&gt; 
-        // send the message to the server
-        Bridge.Send(ServerMsg.LoadUsers)
-        state, Cmd.none
-    | UsersLoaded users -&gt;
-        // receive message from the server
-        let nextState = { state with Users = users }
-        nextState, Cmd.none
-
-// Server-side
-let update clientDispatch msg state = 
-    match msg with 
-    | ServerMsg.LoadUsers -&gt;
-        let loadUsersCmd = 
-            Cmd.ofAsync 
-                getUsersFromDb    // unit -&gt; Async&lt;User list&gt;
-                ()                // input arg = unit
-                UsersLoadedFromDb // User list -&gt; ServerMsg
-                DoNothing         // ServerMsg
-        state, loadUsersCmd
-
-    | ServerMsg.UsersLoadedFromDbSuccess users -&gt;
-        // answer the current connected client with data
-        clientDispatch (ClientMsg.UsersLoaded users)
-        state, Cmd.none
-
-    | ServerMsg.DoNothing -&gt;
-        state, Cmd.none
+                <h1 id="client-server-communication-over-http">Client Server communication over HTTP</h1>
+<p>Communicating over raw HTTP using Saturn has three main steps.</p>
+<h2 id="1-load-your-data">1. Load your data</h2>
+<p>Start by creating a function in your server that returns some data:</p>
+<pre><code class="fsharp">let loadCustomersFromDb() =
+    [ { Id = 1; Name = &quot;Joe Bloggs&quot; } ]
 </code></pre>
 
-<p>The above example mimics what would have been a <code>GET</code> request to the server to get user data from database. However, now the client sends a fire-and-forget message to the server to load users, and at some point the server messages the current client back with the results. Notice that the server could have decided to do other things than just messaging the client back: for example, it could have broadcasted the same message to other clients updating their local state of the users.  </p>
-<h2 id="when-to-use-elmishbridge">When to use Elmish.Bridge</h2>
-<p>There are many scenarios where it makes sense to use Elmish.Bridge:</p>
-<ul>
-<li>Chat-like applications with many connected users through many channels</li>
-<li>Syncing price data in real-time while viewing ticket prices</li>
-<li>Multiplayer games that need real-time update of game states</li>
-<li>Other applications of web sockets through an Elmish model</li>
-</ul>
-<h2 id="things-to-consider">Things to consider</h2>
-<p>The biggest distinction between using this and "raw" Saturn is that your web server becomes a stateful service. This introduces several differences for application design.</p>
-<ol>
-<li>
-<p>The server state has a lifespan equal to the that of the process under which the server instance is running. This means if the server application restarts then the server state will be reset.</p>
-</li>
-<li>
-<p>The server state is <em>local to the server instance</em>. This means that if you run multiple web servers, they won't be sharing the same server state by default.</p>
-</li>
-</ol>
-<p>As of now there is no built-in persistence for the state, but you can implement this yourself using any number of persistance layers such as Redis Cache, Azure Tables or Blobs etc.</p>
-<p>In addition Elmish.Bridge does not use standard HTTP verbs for communication, but rather websockets. Therefore, it is not a suitable technology for an open web server that can serve requests from other sources than Elmish.Bridge clients.</p>
-<h2 id="learn-more-about-elmishbridge">Learn more about Elmish.Bridge</h2>
-<p>Head over to <a href="https://github.com/Nhowka/Elmish.Bridge">Elmish.Bridge</a> to learn more. </p>
+<p>Next, create a method which returns the data as JSON within Giraffe's HTTP context.</p>
+<pre><code class="fsharp">/// Returns the results of loadCustomersFromDb as JSON.
+let getCustomers next ctx =
+    json (loadCustomersFromDb()) next ctx
+</code></pre>
+
+<p>You can opt to combine both of the above functions into one, depending on your preferences, but it's often good practice to separate your data access from serving data in HTTP endpoints.</p>
+<p>Also note the <code>next</code> and <code>ctx</code> arguments. These are used by Giraffe as part of its <a href="https://github.com/giraffe-fsharp/Giraffe/blob/master/DOCUMENTATION.md#fundamentals">HTTP pipeline</a> and are required by the <code>json</code> function (Note you can also use <code>Successful.Ok</code> instead of <code>json</code>, which will offer XML serialization as well).</p>
+<h2 id="2-expose-data-through-saturn">2. Expose data through Saturn.</h2>
+<p>Now expose the api method using <a href="https://saturnframework.github.io/docs/api/scope/">Saturn's</a> <code>router</code> construct and add it to your overall application scope:</p>
+<pre><code class="fsharp">let myApis = router {
+    get &quot;/api/customers/&quot; getCustomers
+}
+</code></pre>
+
+<p>For simple endpoints you may elect to embed the API call directly in the scope (and use partial application to omit the <code>next</code> and <code>ctx</code> arguments):</p>
+<pre><code class="fsharp">let myApis = router {
+    get &quot;/api/customers/&quot; (json (loadCustomersFromDb()))
+}
+</code></pre>
+
+<h2 id="3-consume-the-endpoint-from-the-client">3. Consume the endpoint from the client.</h2>
+<p>Finally, call the endpoint from your client application.</p>
+<pre><code class="fsharp">promise {    
+    let! customers = Fetch.fetchAs&lt;Customer list&gt; &quot;api/customers&quot; (Decode.Auto.generateDecoder()) []
+    // do more with customers here...
+}
+</code></pre>
+
+<p>Note the use of the <code>promise { }</code> computation expression. This behaves similarly to <code>async { }</code> blocks that you might already know, whilst the <code>fetchAs</code> function retrieves data from the HTTP endpoint specified. The JSON is deserialized a <code>Customer</code> array using an automatically-generated "decoder" (see the section on <a href="feature-clientserver-serialization">serialization</a> for more information).</p>
                 
                   
                 
@@ -905,8 +925,8 @@ let update clientDispatch msg state =
 
         <!-- Link to previous page -->
         
-          <a href="/docs/feature-clientserver/"
-              title="Client/Server communication"
+          <a href="/docs/feature-clientserver-basics/"
+              title="Sharing Types and Code"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -919,7 +939,7 @@ let update clientDispatch msg state =
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Client/Server communication
+                Sharing Types and Code
               </span>
             </div>
           </a>
@@ -927,7 +947,7 @@ let update clientDispatch msg state =
 
         <!-- Link to next page -->
         
-          <a href="/docs/feature-ssr/" title="Server Side Rendering"
+          <a href="/docs/feature-clientserver-remoting/" title="Messaging with Protocols"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -936,7 +956,7 @@ let update clientDispatch msg state =
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Server Side Rendering
+                Messaging with Protocols
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

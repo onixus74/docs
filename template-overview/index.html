@@ -454,6 +454,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pattern" title="Pattern" class="md-nav__link">
+    Pattern
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#deploy" title="Deploy" class="md-nav__link">
     Deploy
   </a>
@@ -596,9 +603,28 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      Client / Server Sharing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        Client / Server Sharing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../feature-clientserver/" title="Client/Server communication" class="md-nav__link">
-      Client/Server communication
+    <a href="../feature-clientserver/" title="Sharing Overview" class="md-nav__link">
+      Sharing Overview
     </a>
   </li>
 
@@ -609,9 +635,62 @@
 
 
   <li class="md-nav__item">
-    <a href="../feature-elmish-bridge/" title="Elmish on the server" class="md-nav__link">
-      Elmish on the server
+    <a href="../feature-clientserver-basics/" title="Sharing Types and Code" class="md-nav__link">
+      Sharing Types and Code
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-clientserver-http/" title="Messaging using HTTP" class="md-nav__link">
+      Messaging using HTTP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-clientserver-remoting/" title="Messaging with Protocols" class="md-nav__link">
+      Messaging with Protocols
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-clientserver-bridge/" title="Stateful Messaging through Bridge" class="md-nav__link">
+      Stateful Messaging through Bridge
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../feature-clientserver-serialization/" title="Serialization in SAFE" class="md-nav__link">
+      Serialization in SAFE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -826,6 +905,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pattern" title="Pattern" class="md-nav__link">
+    Pattern
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#deploy" title="Deploy" class="md-nav__link">
     Deploy
   </a>
@@ -919,6 +1005,14 @@
 <ul>
 <li><code>none</code>: don't add any additional libraries for client-server communication <strong>(default)</strong></li>
 <li><code>remoting</code>: add <a href="https://github.com/Zaid-Ajaj/Fable.Remoting">Fable.Remoting</a> to the template.</li>
+</ul>
+<h3 id="pattern">Pattern</h3>
+<p><em>Configures Client app to use one of available patterns. Currently supports only either default Elmish architecture with Commands or simple (no Commands) Elmish Architecture with conjunction with <a href="https://dbrattli.github.io/Fable.Reaction/">Fable.Reaction</a> library for Reactive programming</em></p>
+<p>Usage: <code>dotnet new SAFE --pattern &lt;pattern model&gt;</code></p>
+<p>Where <code>&lt;pattern model&gt;</code> is one of:</p>
+<ul>
+<li><code>default</code>: use standard Elmish architecture with Commands <strong>(default)</strong></li>
+<li><code>reaction</code>: use simple Elmish architecture without Commands + <a href="https://dbrattli.github.io/Fable.Reaction/">Fable.Reaction</a> for reactive pattern</li>
 </ul>
 <h3 id="deploy">Deploy</h3>
 <p><em>Optionally configures the SAFE app to elements needed for deploying to one of two different hosting models. If this argument is not supplied, no explicit support for any hosting model will be provided.</em></p>
