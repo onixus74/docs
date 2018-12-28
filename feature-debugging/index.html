@@ -716,36 +716,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#known-issues" title="Known Issues" class="md-nav__link">
-    Known Issues
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#node-process-remains-after-stopping-the-debugger" title="Node Process remains after stopping the debugger" class="md-nav__link">
-    Node Process remains after stopping the debugger
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chrome-opens-to-a-blank-window" title="Chrome opens to a blank window" class="md-nav__link">
-    Chrome opens to a blank window
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#socketprotocolerror-in-debug-console" title="SocketProtocolError in Debug Console" class="md-nav__link">
-    SocketProtocolError in Debug Console
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -840,6 +813,18 @@
   <li class="md-nav__item">
     <a href="../faq-build/" title="Moving from dev to prod" class="md-nav__link">
       Moving from dev to prod
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq-troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
     </a>
   </li>
 
@@ -1017,36 +1002,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#known-issues" title="Known Issues" class="md-nav__link">
-    Known Issues
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#node-process-remains-after-stopping-the-debugger" title="Node Process remains after stopping the debugger" class="md-nav__link">
-    Node Process remains after stopping the debugger
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chrome-opens-to-a-blank-window" title="Chrome opens to a blank window" class="md-nav__link">
-    Chrome opens to a blank window
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#socketprotocolerror-in-debug-console" title="SocketProtocolError in Debug Console" class="md-nav__link">
-    SocketProtocolError in Debug Console
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1150,21 +1108,8 @@
 <p>You can also launch and debug either the client or server in isolation. This may be useful if you are running the other component separately e.g. through FAKE, the <code>dotnet</code> command line tool directly or via Visual Studio. You can initiate this by choosing either <strong>Debug Client</strong> or <strong>Debug Server</strong> as required.</p>
 <h3 id="build-server">Build Server</h3>
 <p>You can initiate a restore and rebuild of the server by hitting <code>CTRL + SHIFT + B</code> and selecting <strong>Build Server</strong> from the drop-down.</p>
-<h2 id="known-issues">Known Issues</h2>
-<h3 id="node-process-remains-after-stopping-the-debugger">Node Process remains after stopping the debugger</h3>
-<p>VS Code does not kill the Fable dotnet process when you stop the debugger, leaving it running as a "zombie". In such a case, you will have to explicitly kill the process otherwise it will hold onto
-port 8080 and prevent you starting new instances. Tracked <a href="https://github.com/SAFE-Stack/SAFE-template/issues/191">here</a>.</p>
-<h3 id="chrome-opens-to-a-blank-window">Chrome opens to a blank window</h3>
-<ul>
-<li>Occasionally, VS Code will open Chrome before the Client has started. In this case, you will be presented with a blank screen until the client starts.</li>
-<li>Depending on the order in which compilation occurs, VS Code may launch the web browser before the server has started. If this occurs, you may need to refresh the browser once the server is fully initialised.</li>
-</ul>
-<h3 id="socketprotocolerror-in-debug-console">SocketProtocolError in Debug Console</h3>
-<p>You may see the following <code>SocketProtocolError</code> message in the Debug Console once you have started your SAFE application. Whilst these messages can be safely ignored, you can eliminate them by installing the Redux Dev Tools in the launched Chrome instance as described earlier.</p>
-<blockquote>
-<p><code>WebSocket connection to 'ws://localhost:8000/socketcluster/' failed: Error during WebSocket handshake: Unexpected response code: 404</code></p>
-</blockquote>
-<p><center><img src="../img/feature-debugging-5.png" style="height: 175px;"/></center></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Still have issues getting the debugger to work? Check out the <a href="../faq-troubleshooting/">troubleshooting</a> page.</p>
                 
                   
                 
