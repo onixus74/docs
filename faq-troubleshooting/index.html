@@ -976,11 +976,12 @@
 <p>If you fail to execute <code>fake</code> from command line after installing it as a global tool, you might need to add it to your <code>PATH</code> manually: (e.g. <code>export PATH="$HOME/.dotnet/tools:$PATH"</code> on unix) - <a href="https://github.com/dotnet/cli/issues/9321">related GitHub issue</a></p>
 <h2 id="diagnostics">Diagnostics</h2>
 <h3 id="socketprotocolerror-in-debug-console">SocketProtocolError in Debug Console</h3>
-<p>You may see the following <code>SocketProtocolError</code> message in the Debug Console once you have started your SAFE application. Whilst these messages can be safely ignored, you can eliminate them by installing the Redux Dev Tools in the launched Chrome instance as described earlier.</p>
+<p>You may see the following <code>SocketProtocolError</code> message in the Debug Console once you have started your SAFE application.</p>
 <blockquote>
 <p><code>WebSocket connection to 'ws://localhost:8000/socketcluster/' failed: Error during WebSocket handshake: Unexpected response code: 404</code></p>
 </blockquote>
 <p><center><img src="../img/feature-debugging-5.png" style="height: 175px;"/></center></p>
+<p>Whilst these messages can be safely ignored, you can eliminate them by installing <strong>Redux Dev Tools</strong> in the launched Chrome instance as described in the debugging <a href="../feature-debugging/#prerequisites">prerequisites</a> section.</p>
 <h2 id="debugging-in-vs-code">Debugging in VS Code</h2>
 <h3 id="node-process-remains-after-stopping-the-debugger">Node Process remains after stopping the debugger</h3>
 <p>VS Code does not kill the Fable dotnet process when you stop the debugger, leaving it running as a "zombie". In such a case, you will have to explicitly kill the process otherwise it will hold onto
