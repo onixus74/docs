@@ -895,11 +895,15 @@
 <h2 id="install-pre-requisites">Install pre-requisites</h2>
 <p>You'll need to install the following pre-requisites in order to build SAFE applications</p>
 <ul>
-<li>The <a href="https://www.microsoft.com/net/download/">.NET Core SDK 2.1</a>.</li>
-<li><a href="https://fake.build/">FAKE 5</a> installed as a <a href="https://fake.build/fake-gettingstarted.html#Install-FAKE">global tool</a> - recommended version is FAKE &gt;= 5.10</li>
-<li>The <a href="https://yarnpkg.com/lang/en/docs/install/">Yarn</a> package manager - recommended version is Yarn &gt;= 1.10.1</li>
-<li><a href="https://nodejs.org/en/download/">Node 8.x</a> installed for the front end components.</li>
-<li>If you're running on OSX or Linux, you'll also need to install <a href="https://www.mono-project.com/docs/getting-started/install/">Mono</a>.</li>
+<li>The <a href="https://www.microsoft.com/net/download/">.NET Core SDK 2.1</a></li>
+<li><a href="https://fake.build/">FAKE 5</a> installed as a <a href="https://fake.build/fake-gettingstarted.html#Install-FAKE">global tool</a> (recommended version &gt;= 5.10)</li>
+<li>A Javascript package manager, one of:<ul>
+<li><a href="https://yarnpkg.com/lang/en/docs/install/">Yarn</a> (recommended version &gt;= 1.10.1)</li>
+<li><a href="https://www.npmjs.com/">NPM</a> plus <a href="../template-overview/#js-deps">required dependencies</a></li>
+</ul>
+</li>
+<li><a href="https://nodejs.org/en/download/">Node 8.x</a> installed for the front end components</li>
+<li>If you're running on OSX or Linux, you'll also need to install <a href="https://www.mono-project.com/docs/getting-started/install/">Mono</a></li>
 </ul>
 <h2 id="install-an-f-code-editor">Install an F# code editor</h2>
 <p>You'll also want an IDE to create F# applications. We recommend one of the following great IDEs.</p>
@@ -917,7 +921,7 @@
 <li>Enter <code>fake build --target run</code> to build and run the app</li>
 </ol>
 <p>Congratulations - after a short delay, you'll be presented with a basic SAFE application running in your browser! The application will by default run in "development mode", which means it automatically watch your project for changes; whenever you save a file in the client project it will refresh the browser <strong>automatically</strong>; if you save a file in the server project it will also restart the server in the background.</p>
-<p>Take a look at the <a href="../template-overview/#template-options.md">template options</a>. There are several ways to customise the default application, such as server and client/server communication technologies.</p>
+<p>Take a look at the <a href="../template-overview/#template-options">template options</a>. There are several ways to customise the default application, such as server and client/server communication technologies.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>Still have issues getting started? Check out the <a href="../faq-troubleshooting/">troubleshooting</a> page.</p>
                 
