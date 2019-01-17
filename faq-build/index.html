@@ -453,6 +453,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../template-gcp-appengine/" title="Deploy to Google Cloud AppEngine" class="md-nav__link">
+      Deploy to Google Cloud AppEngine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../template-azure-ai/" title="Application Insights Integration" class="md-nav__link">
       Application Insights Integration
     </a>
@@ -467,6 +479,18 @@
   <li class="md-nav__item">
     <a href="../template-azure-registration/" title="Registering with Azure" class="md-nav__link">
       Registering with Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../template-google-cloud/" title="Registering with Google Cloud" class="md-nav__link">
+      Registering with Google Cloud
     </a>
   </li>
 
@@ -932,7 +956,7 @@
 <p>It's important to note that the webpack dev server is configured to automatically route traffic intended for <code>api/*</code> routes to the back-end web server. This <em>simulates</em> how a SAFE application might work in a production environment, with both client and server assets served from a single web server. This also allows you to not worry about ports and hosts for your backend server in your client code, or <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a> issues. You can find out more about the configuration of the webpack dev server in SAFE <a href="../template-webpack/">here</a>.</p>
 <h2 id="running-safe-applications-in-production">Running SAFE applications in production</h2>
 <p>In a production environment, you won't typically use the webpack dev server. Instead, it's more common to use webpack as a one-off compiler step to create your bundled javascript from your Fable app (plus dependencies), and then deploy this along with your back-end web server which also hosts that content directly. For example, you can use Saturn to host the static content required by the application e.g. HTML, JS and CSS files etc. as well as your back-end APIs. This fits very well with standard CI / CD processes, as a build step in your FAKE script or VSTS / AppVeyor / Travis step etc.</p>
-<p>Both the <a href="../template-appservice/">Azure</a> and <a href="../template-docker/">Docker</a> configuration options will do this automatically.</p>
+<p>All <a href="../template-overview/#deploy">deployments options</a> do this automatically.</p>
 <p><img alt="" src="../img/faq-build-2.png" /></p>
 <h3 id="client-asset-hosting-alternatives">Client asset hosting alternatives</h3>
 <p>Rather than hosting your client-side content and application inside your web server, you can opt to host your static content from some other service that supports hosting of HTTP content, such as Azure Blobs, or a content hosting service. In such a case, you'll need to consider how to route traffic to your back-end API from your client application (as they are hosted on different domains), as well as handle any potential CORS issues.</p>

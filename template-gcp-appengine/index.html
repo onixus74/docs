@@ -13,7 +13,7 @@
         <meta name="description" content="Documentation for SAFE">
       
       
-        <link rel="canonical" href="http://safe-stack.github.io/docs/feature-clientserver-basics/">
+        <link rel="canonical" href="http://safe-stack.github.io/docs/template-gcp-appengine/">
       
       
         <meta name="author" content="SAFE Stack">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Sharing Types and Code - SAFE Documentation</title>
+        <title>Deploy to Google Cloud AppEngine - SAFE Documentation</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#sharing-types" tabindex="1" class="md-skip">
+      <a href="../#quickstart" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 SAFE Documentation
               </span>
               <span class="md-header-nav__topic">
-                Sharing Types and Code
+                Deploy to Google Cloud AppEngine
               </span>
             
           
@@ -365,10 +365,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       The SAFE Template
@@ -408,10 +410,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3" checked>
     
     <label class="md-nav__link" for="nav-6-3">
       Deployment Options
@@ -451,11 +455,93 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../template-gcp-appengine/" title="Deploy to Google Cloud AppEngine" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deploy to Google Cloud AppEngine
+      </label>
+    
+    <a href="./" title="Deploy to Google Cloud AppEngine" class="md-nav__link md-nav__link--active">
       Deploy to Google Cloud AppEngine
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" title="Quickstart" class="md-nav__link">
+    Quickstart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-appengine" title="What is AppEngine" class="md-nav__link">
+    What is AppEngine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-steps" title="Deployment steps" class="md-nav__link">
+    Deployment steps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-fake-build-tasks" title="Custom FAKE build tasks" class="md-nav__link">
+    Custom FAKE build tasks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-deploy-done" title="How is deploy done?" class="md-nav__link">
+    How is deploy done?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-app" title="Viewing the app" class="md-nav__link">
+    Viewing the app
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#things-to-consider" title="Things to consider" class="md-nav__link">
+    Things to consider
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -509,12 +595,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Features of SAFE
@@ -530,12 +614,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
     
     <label class="md-nav__link" for="nav-7-1">
       Client / Server Sharing
@@ -563,52 +645,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Sharing Types and Code
-      </label>
-    
-    <a href="./" title="Sharing Types and Code" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../feature-clientserver-basics/" title="Sharing Types and Code" class="md-nav__link">
       Sharing Types and Code
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sharing-types" title="Sharing Types" class="md-nav__link">
-    Sharing Types
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sharing-behaviour" title="Sharing Behaviour" class="md-nav__link">
-    Sharing Behaviour
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -857,15 +898,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sharing-types" title="Sharing Types" class="md-nav__link">
-    Sharing Types
+  <a href="#quickstart" title="Quickstart" class="md-nav__link">
+    Quickstart
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sharing-behaviour" title="Sharing Behaviour" class="md-nav__link">
-    Sharing Behaviour
+  <a href="#what-is-appengine" title="What is AppEngine" class="md-nav__link">
+    What is AppEngine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-steps" title="Deployment steps" class="md-nav__link">
+    Deployment steps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-fake-build-tasks" title="Custom FAKE build tasks" class="md-nav__link">
+    Custom FAKE build tasks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-deploy-done" title="How is deploy done?" class="md-nav__link">
+    How is deploy done?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-app" title="Viewing the app" class="md-nav__link">
+    Viewing the app
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#things-to-consider" title="Things to consider" class="md-nav__link">
+    Things to consider
   </a>
   
 </li>
@@ -886,40 +968,38 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/feature-clientserver-basics.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/template-gcp-appengine.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Sharing Types and Code</h1>
+                  <h1>Deploy to Google Cloud AppEngine</h1>
                 
-                <h2 id="sharing-types">Sharing Types</h2>
-<p>Sharing your domain types and contracts between client and server is extremely simple. Thanks to Fable's excellent F# transpilation into Javascript, you can use all standard F# language features such as Records, Tuples and Discriminated Unions without worry. To share types across both your client and server project, first create a file in your repository called e.g <code>Shared.fs</code>.
-<img alt="" src="../img/client-server-01.png" /></p>
-<p>Then, create types in the file as needed e.g</p>
-<pre><code class="fsharp">type Customer = { Id : int; Name : string }
+                <p>The SAFE template has the ability to deploy to <a href="https://cloud.google.com/appengine/">AppEngine</a> on Google Cloud Platform, GCP, with minimum effort. The deployment relies on AppEngine's flex deployment, that is, it is deploying a docker container.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>First make sure you have <code>gcloud</code> cli tool <a href="../template-google-cloud/#setup-gcloud-cli-tool">configured</a>.
+If you are already familiar with GCP and have <code>gcloud</code> in place, all you need to do to get started is:</p>
+<pre><code>dotnet new SAFE --deploy gcp-appengine
+gcloud app create
+fake build -t Deploy
+gcloud app browse
 </code></pre>
 
-<p>Reference this file to your server project. You can now reference those types in the server.</p>
-<pre><code class="xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
-    ...
-    &lt;ItemGroup&gt;
-        &lt;Compile Include=&quot;../Shared/Shared.fs&quot; /&gt;
-    &lt;/ItemGroup&gt;
-    ...
-&lt;/Project&gt;
-</code></pre>
-
-<p>Finally, reference this file to your client project (as above). You can now reference those types in the client; Fable will automatically convert your F# types into Javascript in the background.</p>
-<h2 id="sharing-behaviour">Sharing Behaviour</h2>
-<p>You can also share code using the same mechanism as sharing types. This is extremely useful for e.g shared validation or business logic that needs to occur on both client and server.</p>
-<p>Fable will translate your functions into native Javascript, and will even translate many calls to the .NET base class library into corresponding Javascript! This allows you to compile your domain model and domain logic to many many different targets including:</p>
+<h2 id="what-is-appengine">What is AppEngine</h2>
+<p>Google Cloud AppEngine is a fully managed serverless application platform. AppEngine supports an environment that is called <a href="https://cloud.google.com/appengine/docs/flexible/">flexible environment</a>. The flexible environment has native support for many different languages, and also an option of creating a custom environment. Even though .NET is supported, it is limited and focus on aspnet core, so the AppEngine support for SAFE is currently using the custom runtime for more flexibility.</p>
+<p>Pricing for AppEngine depends on the size of and the number of machines you use.</p>
+<h2 id="deployment-steps">Deployment steps</h2>
+<p>Before you can deploy your AppEngine app you need to create a <a href="../template-google-cloud/#creating-an-account">Google Cloud Platform account</a>, <a href="../template-google-cloud/#setup-gcloud-cli-tool">set up the <code>gcloud</code> CLI tool</a> and <a href="../template-google-cloud/#enable-billing">enable billing</a>.</p>
+<h3 id="custom-fake-build-tasks">Custom FAKE build tasks</h3>
 <ul>
-<li>ASP.NET Core (via Saturn)</li>
-<li>Azure Functions</li>
-<li>Javascript that runs in the browser</li>
-<li>Javascript that runs on mobile devices with <a href="https://facebook.github.io/react-native/">React Native</a>.</li>
-<li>Raspberry Pi (via .NET Core)</li>
+<li><strong>Bundle</strong> - Runs after the standard Build step. It combines the outputs of the Client and Server application into a single folder.</li>
+<li><strong>Deploy</strong> - Invokes the <code>gcloud</code> command to deploy to AppEngine.</li>
 </ul>
-<p>You can read more about this <a href="http://fable.io/docs/compatibility.html">on the Fable website</a>.</p>
+<h3 id="how-is-deploy-done">How is deploy done?</h3>
+<p>The deploy to AppEngine is not to complicated. The deploy leverage the fact that the AppEngine flex environment allows for custom runtimes. What that mean is that you basically can deploy an app that is defined by a docker container. In its simplest form you just need to have a <code>Dockerfile</code> present that defines the container and that will be built during deploy, and that is exactly how the deploy in this template is configured. We have a <code>app.yaml</code> file, that is used to configure your AppEngine app, and there we define runtime and also environment variables for the app. The <code>Deploy</code> task in the FAKE script invokes <code>gcloud app deploy --quiet</code>, which will deploy the app to the active google cloud project using the definition in the <code>app.yaml</code> and <code>Dockerfile</code>.</p>
+<h3 id="viewing-the-app">Viewing the app</h3>
+<p>When deploy is done the app will be publicly available, and all you need to do to access the app is to run <code>gcloud app browse</code>.</p>
+<h2 id="things-to-consider">Things to consider</h2>
+<p>The main focus for the AppEngine template is to get you started. Exactly how you want to do the deployment depends on what your deployment process look like. For a small and simple app what you get here might be enough, but for a more complex scenario you might want to build the docker container separately and publish that to a container registry before running the actual deploy command. That makes it possible to disconnect the actual deploy of the container from the build of the container.</p>
+<p>The application also has health and liveliness checks disabled, and that is something you might want to enable again in <code>app.yaml</code> and also implement it in your app. The health and liveliness checks is a feature of AppEngine to make sure your app is running as expected. </p>
                 
                   
                 
@@ -946,8 +1026,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="/docs/feature-clientserver/"
-              title="Sharing Overview"
+          <a href="/docs/template-appservice/"
+              title="Deploy to App Service"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -960,7 +1040,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Sharing Overview
+                Deploy to App Service
               </span>
             </div>
           </a>
@@ -968,7 +1048,7 @@
 
         <!-- Link to next page -->
         
-          <a href="/docs/feature-clientserver-http/" title="Messaging using HTTP"
+          <a href="/docs/template-azure-ai/" title="Application Insights Integration"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -977,7 +1057,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Messaging using HTTP
+                Application Insights Integration
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
