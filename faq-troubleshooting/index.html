@@ -465,6 +465,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../template-gcp-kubernetes/" title="Deploy to Google Cloud Kubernetes Engine" class="md-nav__link">
+      Deploy to Google Cloud Kubernetes Engine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../template-azure-ai/" title="Application Insights Integration" class="md-nav__link">
       Application Insights Integration
     </a>
@@ -795,8 +807,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#node-process-remains-after-stopping-the-debugger" title="Node Process remains after stopping the debugger" class="md-nav__link">
-    Node Process remains after stopping the debugger
+  <a href="#node-process-does-not-stop-after-stopping-the-debugger" title="Node Process does not stop after stopping the debugger" class="md-nav__link">
+    Node Process does not stop after stopping the debugger
   </a>
   
 </li>
@@ -804,6 +816,26 @@
           <li class="md-nav__item">
   <a href="#chrome-opens-to-a-blank-window" title="Chrome opens to a blank window" class="md-nav__link">
     Chrome opens to a blank window
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fable" title="Fable" class="md-nav__link">
+    Fable
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript-bundle-size" title="JavaScript bundle size" class="md-nav__link">
+    JavaScript bundle size
   </a>
   
 </li>
@@ -956,8 +988,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#node-process-remains-after-stopping-the-debugger" title="Node Process remains after stopping the debugger" class="md-nav__link">
-    Node Process remains after stopping the debugger
+  <a href="#node-process-does-not-stop-after-stopping-the-debugger" title="Node Process does not stop after stopping the debugger" class="md-nav__link">
+    Node Process does not stop after stopping the debugger
   </a>
   
 </li>
@@ -965,6 +997,26 @@
           <li class="md-nav__item">
   <a href="#chrome-opens-to-a-blank-window" title="Chrome opens to a blank window" class="md-nav__link">
     Chrome opens to a blank window
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fable" title="Fable" class="md-nav__link">
+    Fable
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript-bundle-size" title="JavaScript bundle size" class="md-nav__link">
+    JavaScript bundle size
   </a>
   
 </li>
@@ -1007,14 +1059,24 @@
 <p><center><img src="../img/feature-debugging-5.png" style="height: 175px;"/></center></p>
 <p>Whilst these messages can be safely ignored, you can eliminate them by installing <strong>Redux Dev Tools</strong> in the launched Chrome instance as described in the debugging <a href="../feature-debugging/#prerequisites">prerequisites</a> section.</p>
 <h2 id="debugging-in-vs-code">Debugging in VS Code</h2>
-<h3 id="node-process-remains-after-stopping-the-debugger">Node Process remains after stopping the debugger</h3>
-<p>VS Code does not kill the Fable dotnet process when you stop the debugger, leaving it running as a "zombie". In such a case, you will have to explicitly kill the process otherwise it will hold onto
-port 8080 and prevent you starting new instances. Tracked <a href="https://github.com/SAFE-Stack/SAFE-template/issues/191">here</a>.</p>
+<h3 id="node-process-does-not-stop-after-stopping-the-debugger">Node Process does not stop after stopping the debugger</h3>
+<p>VS Code does not kill the Fable process when you stop the debugger, leaving it running as a "zombie". In such a case, you will have to explicitly kill the process otherwise it will hold onto
+port 8080 and prevent you starting new instances. This should be easily doable by sending Ctrl+C in the Terminal window in VS Code for <code>Watch Client</code> task. Tracked <a href="https://github.com/SAFE-Stack/SAFE-template/issues/191">here</a>.</p>
+<p><center><img src="../img/faq-troubleshoot-debugging.png" style="height: 175px;"/></center></p>
 <h3 id="chrome-opens-to-a-blank-window">Chrome opens to a blank window</h3>
 <ul>
 <li>Occasionally, VS Code will open Chrome before the Client has started. In this case, you will be presented with a blank screen until the client starts.</li>
 <li>Depending on the order in which compilation occurs, VS Code may launch the web browser before the server has started. If this occurs, you may need to refresh the browser once the server is fully initialised.</li>
 </ul>
+<h2 id="fable">Fable</h2>
+<h3 id="javascript-bundle-size">JavaScript bundle size</h3>
+<p>A project created from SAFE template might issue following warning from Webpack upon building the JavaScript bundle:</p>
+<pre><code>WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+</code></pre>
+
+<p>We're striving to optimise the bundle size, however with a number of different options and dependencies it's not that easy to stay below the Webpack recommended limit.</p>
+<p>To minimize the bundle size in your project you can try restricting browser compatibility by modifying the <a href="https://babeljs.io/docs/en/babel-preset-env#targets">Babel Preset targets for Browserslist</a> and thus using less polyfills.</p>
+<p>For more info, see this <a href="https://github.com/SAFE-Stack/SAFE-template/issues/185">issue</a>.</p>
                 
                   
                 

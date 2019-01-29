@@ -565,6 +565,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../template-gcp-kubernetes/" title="Deploy to Google Cloud Kubernetes Engine" class="md-nav__link">
+      Deploy to Google Cloud Kubernetes Engine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../template-azure-ai/" title="Application Insights Integration" class="md-nav__link">
       Application Insights Integration
     </a>
@@ -1023,6 +1035,8 @@ Entrypoint for the image is <code>dotnet Server.dll</code> (with <code>/Server</
 To allow incoming traffic, port 8085 is exposed.</p>
 <h2 id="release-to-azure-app-service">Release to Azure App Service</h2>
 <p>The following part shows how to set up automatic deployment to <a href="https://azure.microsoft.com">Microsoft Azure</a>.</p>
+<p>Currently, SAFE template doesn't contain additional FAKE build targets to deploy a Docker image directly to Azure, so you'll need to grab (and possibly adjust) <strong>additional FAKE "Deploy" target</strong> from <a href="https://github.com/SAFE-Stack/SAFE-BookStore/blob/master/build.fsx">SAFE BookStore</a> build script.</p>
+<p>Following steps assume you've added the necessary build script fragments from SAFE BookStore.</p>
 <h3 id="docker-hub">Docker Hub</h3>
 <p>Create a new <a href="https://hub.docker.com">Docker Hub</a> account and a new public repository on Docker Hub.</p>
 <h3 id="release-script">Release script</h3>

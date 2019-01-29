@@ -13,7 +13,7 @@
         <meta name="description" content="Documentation for SAFE">
       
       
-        <link rel="canonical" href="http://safe-stack.github.io/docs/overview/">
+        <link rel="canonical" href="http://safe-stack.github.io/docs/template-gcp-kubernetes/">
       
       
         <meta name="author" content="SAFE Stack">
@@ -42,7 +42,7 @@
     
     
       
-        <title>SAFE Stack Overview - SAFE Documentation</title>
+        <title>Deploy to Google Cloud Kubernetes Engine - SAFE Documentation</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#safe-stack-components" tabindex="1" class="md-skip">
+      <a href="../#quickstart" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 SAFE Documentation
               </span>
               <span class="md-header-nav__topic">
-                SAFE Stack Overview
+                Deploy to Google Cloud Kubernetes Engine
               </span>
             
           
@@ -281,93 +281,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        SAFE Stack Overview
-      </label>
-    
-    <a href="./" title="SAFE Stack Overview" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../overview/" title="SAFE Stack Overview" class="md-nav__link">
       SAFE Stack Overview
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#safe-stack-components" title="SAFE Stack components" class="md-nav__link">
-    SAFE Stack components
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#saturn" title="Saturn" class="md-nav__link">
-    Saturn
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#microsoft-azure" title="Microsoft Azure" class="md-nav__link">
-    Microsoft Azure
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fable" title="Fable" class="md-nav__link">
-    Fable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#elmish" title="Elmish" class="md-nav__link">
-    Elmish
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#further-reading" title="Further reading" class="md-nav__link">
-    Further reading
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#are-there-alternative-components-in-the-safe-stack" title="Are there alternative components in the SAFE stack?" class="md-nav__link">
-    Are there alternative components in the SAFE stack?
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -447,10 +365,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       The SAFE Template
@@ -490,10 +410,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3" checked>
     
     <label class="md-nav__link" for="nav-6-3">
       Deployment Options
@@ -545,11 +467,107 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../template-gcp-kubernetes/" title="Deploy to Google Cloud Kubernetes Engine" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deploy to Google Cloud Kubernetes Engine
+      </label>
+    
+    <a href="./" title="Deploy to Google Cloud Kubernetes Engine" class="md-nav__link md-nav__link--active">
       Deploy to Google Cloud Kubernetes Engine
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" title="Quickstart" class="md-nav__link">
+    Quickstart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-kubernetes-engine" title="What is Kubernetes Engine" class="md-nav__link">
+    What is Kubernetes Engine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-steps" title="Deployment steps" class="md-nav__link">
+    Deployment steps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-your-cluster-and-installing-kubectl" title="Creating your cluster and installing kubectl" class="md-nav__link">
+    Creating your cluster and installing kubectl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-fake-build-tasks" title="Custom FAKE build tasks" class="md-nav__link">
+    Custom FAKE build tasks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-deploy-done" title="How is deploy done?" class="md-nav__link">
+    How is deploy done?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-the-app" title="Viewing the app" class="md-nav__link">
+    Viewing the app
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gotchas" title="Gotchas" class="md-nav__link">
+    Gotchas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#things-to-consider" title="Things to consider" class="md-nav__link">
+    Things to consider
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -906,37 +924,51 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#safe-stack-components" title="SAFE Stack components" class="md-nav__link">
-    SAFE Stack components
+  <a href="#quickstart" title="Quickstart" class="md-nav__link">
+    Quickstart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-kubernetes-engine" title="What is Kubernetes Engine" class="md-nav__link">
+    What is Kubernetes Engine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-steps" title="Deployment steps" class="md-nav__link">
+    Deployment steps
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#saturn" title="Saturn" class="md-nav__link">
-    Saturn
+  <a href="#creating-your-cluster-and-installing-kubectl" title="Creating your cluster and installing kubectl" class="md-nav__link">
+    Creating your cluster and installing kubectl
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#microsoft-azure" title="Microsoft Azure" class="md-nav__link">
-    Microsoft Azure
+  <a href="#custom-fake-build-tasks" title="Custom FAKE build tasks" class="md-nav__link">
+    Custom FAKE build tasks
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fable" title="Fable" class="md-nav__link">
-    Fable
+  <a href="#how-is-deploy-done" title="How is deploy done?" class="md-nav__link">
+    How is deploy done?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#elmish" title="Elmish" class="md-nav__link">
-    Elmish
+  <a href="#viewing-the-app" title="Viewing the app" class="md-nav__link">
+    Viewing the app
   </a>
   
 </li>
@@ -947,15 +979,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#further-reading" title="Further reading" class="md-nav__link">
-    Further reading
+  <a href="#gotchas" title="Gotchas" class="md-nav__link">
+    Gotchas
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#are-there-alternative-components-in-the-safe-stack" title="Are there alternative components in the SAFE stack?" class="md-nav__link">
-    Are there alternative components in the SAFE stack?
+  <a href="#things-to-consider" title="Things to consider" class="md-nav__link">
+    Things to consider
   </a>
   
 </li>
@@ -976,39 +1008,71 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/overview.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/SAFE-Stack/docs/edit/master/docs/template-gcp-kubernetes.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>SAFE Stack Overview</h1>
+                  <h1>Deploy to Google Cloud Kubernetes Engine</h1>
                 
-                <h2 id="safe-stack-components">SAFE Stack components</h2>
-<p>The SAFE acronym is made up of four separate components:</p>
+                <p>The SAFE template has the ability to deploy to <a href="https://cloud.google.com/kubernetes-engine/">Kubernetes Engine</a> on Google Cloud Platform, GCP, with minimum effort. The focus of the template is to set up the basic building blocks like creating the container, publishing the container and also create a simple deployment on kubernetes that exposes a kubernetes service. You probably want to, and should, add things like a proper hostname and https support. That can be done in multiple ways and is more of a kubernetes specific task than a SAFE task.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>If you are familiar with GCP and already have <code>gcloud</code> and <code>kubectl</code> configured and an existing kubernetes cluster all you need to do to get started is running these commands:</p>
+<pre><code>dotnet new SAFE --deploy gcp-kubernetes
+fake build -t Deploy
+</code></pre>
+
+<p>The quickstart assumes you have a default zone configured, and it will deploy to a cluster named <code>safe-cluster</code>. To change the cluster add <code>-e SAFE_CLUSTER=&lt;kubernetes cluster&gt;</code> to the <code>fake</code> command. To get the exposed IP you need to run the following command:</p>
+<pre><code>kubectl get service safe-template
+</code></pre>
+
+<h2 id="what-is-kubernetes-engine">What is Kubernetes Engine</h2>
+<p><a href="https://cloud.google.com/kubernetes-engine/">Kubernetes Engine</a> is a managed, production-ready environment for deploying containerized applications on Google Cloud Platform.</p>
+<p>Compared to AppEngine you will get faster deploy, but it also comes at a cost of higher operational cost. Total cost might be lower though depending on how many apps you run and how large your cluster is. One cluster can often host multiple apps, while each AppEngine app requires a single machine so with many apps AppEngine might be more expensive.</p>
+<p>Covering Kubernetes and Kubernetes Engine in greater detail is too large of a topic in this context, and there are a lot of tutorials on those topics available.</p>
+<h2 id="deployment-steps">Deployment steps</h2>
+<p>Before you can deploy your Kubernetes Engine app you need to create a <a href="../template-google-cloud/#creating-an-account">Google Cloud Platform account</a>, <a href="../template-google-cloud/#setup-gcloud-cli-tool">set up the <code>gcloud</code> CLI tool</a> and <a href="../template-google-cloud/#enable-billing">enable billing</a>. The kubernetes deploy also rely on Google Cloud Container Registry, and you also need to authenticate with the registry. How that is done is described here: <a href="https://cloud.google.com/container-registry/docs/advanced-authentication">https://cloud.google.com/container-registry/docs/advanced-authentication</a>.</p>
+<h3 id="creating-your-cluster-and-installing-kubectl">Creating your cluster and installing kubectl</h3>
+<p>To make some of the commands easier we first <a href="https://cloud.google.com/compute/docs/gcloud-compute/#set_default_zone_and_region_in_your_local_client">set a default zone</a> that will be used by the <code>gcloud</code> command, both here and from the build script.</p>
+<pre><code>gcloud config set compute/zone europe-west1-b 
+</code></pre>
+
+<p>You can change the zone to a zone closer to where you live, <a href="https://cloud.google.com/compute/docs/regions-zones/">https://cloud.google.com/compute/docs/regions-zones/</a>.</p>
+<p>Next up you need to create your kubernetes cluster. To create a cluster where the nodes are using of the free tier computing resources you can use this command:</p>
+<pre><code>gcloud container clusters create safe-cluster --num-nodes=3 -m f1-micro
+</code></pre>
+
+<p>To interact with the kubernetes cluster you also need to install <code>kubectl</code>. To get the correct version, that is, guaranteed to work with kubernetes engine, it is recommended to install it using <code>gcloud</code>: </p>
+<pre><code>gcloud components install kubectl
+</code></pre>
+
+<p>With this configured and installed you should be good to go.</p>
+<h3 id="custom-fake-build-tasks">Custom FAKE build tasks</h3>
 <ul>
-<li><a href="#saturn"><strong>S</strong>aturn</a> for back-end services in F#</li>
-<li><a href="#microsoft-azure"><strong>A</strong>zure</a> as a hosting platform plus associated platform services</li>
-<li><a href="#fable"><strong>F</strong>able</a> for running F# in the web browser</li>
-<li><a href="#elmish"><strong>E</strong>lmish</a> for client-side user interfaces</li>
+<li><strong>Bundle</strong> - Runs after the standard Build step. It combines the outputs of the Client and Server application into a single folder.</li>
+<li><strong>Docker</strong> - Based on present the <code>Dockerfile</code> a docker container image is built and tagged using the current google cloud project, name of the app and git hash.</li>
+<li><strong>Publish</strong> - Publish the docker container image from the <code>Docker</code> task that matches the current git hash.</li>
+<li><strong>ClusterAuth</strong> - Authenticates against the Google Cloud Kubernetes Cluster</li>
+<li><strong>Deploy</strong> - Invokes <code>kubectl</code> to either deploy and expose the app or update the docker image for the deployment.</li>
 </ul>
-<p><img alt="" src="../img/safe-1.png" /></p>
-<h3 id="saturn"><a href="../component-saturn/">Saturn</a></h3>
-<p>The Saturn library builds on top of the solid foundation of both the F#-friendly <a href="https://github.com/giraffe-fsharp/Giraffe">Giraffe</a> and the high performance, rock-solid <a href="https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.1">ASP .NET Core</a> web server to provide a set of optional abstractions which make configuring web applications and constructing complex routes extremely easy to achieve.</p>
-<p>Saturn can host RESTful API endpoints, drive static websites or server-generated content, all inside an easy-to-learn functional programming model.</p>
-<h3 id="microsoft-azure"><a href="../component-azure/">Microsoft Azure</a></h3>
-<p>Azure is a comprehensive set of cloud services that developers and IT professionals use to build, deploy and manage applications through a global network of data centres. Integrated tools, DevOps and a marketplace support you in efficiently building anything from simple mobile apps to Internet-scale solutions.</p>
-<h3 id="fable"><a href="../component-fable/">Fable</a></h3>
-<p>Fable is an F# to JavaScript compiler powered by Babel, designed to produce readable and standard code. Fable allows you to create applications for the browser written entirely in F#, whilst also allowing you to interact with native Javascript as needed.</p>
-<h3 id="elmish"><a href="../component-elmish/">Elmish</a></h3>
-<p>The Elmish model allows you to construct user interfaces running in the browser using a functional programming model. Modelled on the Elm application model, Elmish uses the Model-View-Update paradigm to allow you to write applications that are simple to reason about. Elmish sits on top of the <a href="https://reactjs.org/">React</a> framework.</p>
-<h2 id="further-reading">Further reading</h2>
-<p>Please also feel free to read this <a href="https://compositional-it.com/blog/2017/09-22-safe-release/index.html">blog series</a> on the Compositional IT website for more details on the history of SAFE.</p>
-<h2 id="are-there-alternative-components-in-the-safe-stack">Are there alternative components in the SAFE stack?</h2>
-<p>Yes, absolutely. The above components are what we recommended as the default SAFE stack, but you can of course replace the components with alternatives as you see fit. Here are some alternative technologies which are also recommended by the SAFE team if the basic stack does not fit your needs:</p>
-<ul>
-<li><a href="https://github.com/giraffe-fsharp/Giraffe">Giraffe</a> is a programming model designed for F# that runs on ASP .NET Core. As Saturn runs on top of Giraffe, you automatically get full access to it, but nonetheless it is entirely possible to write applications solely in Giraffe.</li>
-<li><a href="https://freya.io/">Freya</a> is an alternative F#-first web stack which has a pluggable runtime model which allows it to be hosted in a variety of web servers including ASP .NET Core.</li>
-<li><a href="https://aws.amazon.com/">AWS</a> is Amazon's cloud compute offering, providing a large number of services available globally.</li>
-<li><a href="http://websharper.com/">WebSharper</a> is a complete end-to-end programming stack, comprising both server- and client-side components. It supports both F# and C# programming models.</li>
-</ul>
+<h3 id="how-is-deploy-done">How is deploy done?</h3>
+<p>The actual deploy is the simplest possible deploy you can do on a kubernetes cluster. When the <code>Deploy</code> target runs it first checks if the deploy exists or not. If the deploy doesn't exist it will invoke the <code>kubectl run &lt;name&gt; --image=&lt;image name&gt; --port &lt;port&gt;</code> command. That oneline command will create a kubernetes <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod/">pod</a>, a <a href="https://kubernetes.io/docs/concepts/services-networking/service/">service</a>, a <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">deployment</a> and also exposing the service.</p>
+<p>If the deployment already exists instead of deploying the container an update to the image of the pod will be made by running <code>kubectl set image ...</code>. </p>
+<p>The container image that is used is the one that has been published to <a href="https://cloud.google.com/container-registry/">Google Cloud Container Registry</a> in the <code>Publish</code> step. This is just to make it easier to deploy when everything is on the same platform.</p>
+<h3 id="viewing-the-app">Viewing the app</h3>
+<p>No hostname is created during the deploy, and no reverse proxy is configured either, so to view the app you need to get the exposed service external IP:</p>
+<pre><code>kubectl get service safe-template
+</code></pre>
+
+<h2 id="gotchas">Gotchas</h2>
+<p>When you deploy a container to a kubernetes cluster using the container name and tag you might not get an updated version of the contaienr if you use the same tag. The easiest way to change the tag using the default template is to change the <code>getDockerTag</code> function in <code>build.fsx</code>. One common way to create the tag is to use the git sha, given that you use git. To do so you can change the <code>getDockerTag</code> to something like below:</p>
+<pre><code>let getDockerTag projectName =
+    let gitHash = Information.getCurrentHash()
+    let projectId = getGcloudProject()
+    sprintf &quot;gcr.io/%s/%s:%s&quot; projectId projectName gitHash
+</code></pre>
+
+<p>to be sure you get a new docker tag you have to make a commit.</p>
+<h2 id="things-to-consider">Things to consider</h2>
+<p>As mentioned in the beginning, this template is meant to get you started. You will need to configure https, hostnames and other things most likely. There are too many options to consider there to include it in this template, and you might have already invested in some of those options.</p>
                 
                   
                 
@@ -1035,8 +1099,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="/docs/quickstart/"
-              title="Quick Start"
+          <a href="/docs/template-gcp-appengine/"
+              title="Deploy to Google Cloud AppEngine"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1049,7 +1113,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Quick Start
+                Deploy to Google Cloud AppEngine
               </span>
             </div>
           </a>
@@ -1057,7 +1121,7 @@
 
         <!-- Link to next page -->
         
-          <a href="/docs/component-saturn/" title="Learn about Saturn"
+          <a href="/docs/template-azure-ai/" title="Application Insights Integration"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -1066,7 +1130,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Learn about Saturn
+                Application Insights Integration
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
