@@ -932,19 +932,15 @@
 <p>You'll need to install the following pre-requisites in order to build SAFE applications</p>
 <ul>
 <li>The <a href="https://www.microsoft.com/net/download/">.NET Core SDK 2.2</a></li>
-<li><a href="https://fake.build/">FAKE 5</a> installed as a <a href="https://fake.build/fake-gettingstarted.html#Install-FAKE">global tool</a> (recommended version &gt;= 5.10)</li>
-<li>A Javascript package manager, one of:<ul>
-<li><a href="https://yarnpkg.com/lang/en/docs/install/">Yarn</a> (recommended version &gt;= 1.10.1)</li>
-<li><a href="https://www.npmjs.com/">NPM</a> plus <a href="../template-overview/#js-deps">required dependencies</a></li>
-</ul>
-</li>
-<li><a href="https://nodejs.org/en/download/">Node 8.x</a> installed for the front end components</li>
-<li>If you're running on OSX or Linux, you'll also need to install <a href="https://www.mono-project.com/docs/getting-started/install/">Mono</a></li>
+<li><a href="https://fake.build/">FAKE</a> (&gt;= 5.12) installed as global tool (<code>dotnet tool install -g fake-cli</code>)</li>
+<li>(optional) <a href="https://fsprojects.github.io/Paket">Paket</a> (&gt;= 5.196), can also be installed as global tool (<code>dotnet tool install -g paket</code>)</li>
+<li><a href="https://nodejs.org/">node.js</a> (&gt;= 8.0)</li>
+<li><a href="https://yarnpkg.com/">yarn</a> (&gt;= 1.10.1) or <a href="https://www.npmjs.com/">npm</a></li>
 </ul>
 <h2 id="install-an-f-code-editor">Install an F# code editor</h2>
 <p>You'll also want an IDE to create F# applications. We recommend one of the following great IDEs.</p>
 <ul>
-<li><a href="https://code.visualstudio.com/">VS Code</a> + <a href="https://github.com/ionide/ionide-vscode-fsharp">Ionide</a> extension</li>
+<li><a href="https://code.visualstudio.com/">VS Code</a> + <a href="https://github.com/ionide/ionide-vscode-fsharp">Ionide</a> extension (support for <a href="../feature-debugging/">Full Stack Debugging</a>)</li>
 <li><a href="https://www.visualstudio.com/downloads/">Visual Studio 2017</a></li>
 <li><a href="https://www.jetbrains.com/rider/">Jetbrains Rider</a></li>
 </ul>
